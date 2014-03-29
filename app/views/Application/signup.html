@@ -1,0 +1,572 @@
+#{extends 'main.html' /}
+       
+
+    <a href="javascript:close2();">
+
+        <div id="toggleText2" class="redbox">
+
+            <h1 style="text-align:center; color:#EAE9EC; font-size:16px;">
+
+              ////////////////////////////////////////////////////////////////////////////////////////////// </h1>
+
+        </div>
+
+    </a>
+
+     <div id="ctl00_ContentPlaceHolder1_msgBoard"></div>
+
+    </div>
+
+    <div class="pagetop">
+
+        <div class="probar">
+
+            <div class="projectitle">
+
+                Login or Register</div>
+
+        </div>
+
+    </div>
+
+    <!-----------------------------------------------middle content------------------------------------------------------->
+
+    <div class="clear-fix">
+
+    </div>
+
+    <div id="mainbox">
+
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+            <tr>
+
+                <td width="300" valign="top">
+
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+
+                        <tr>
+
+                            <td>
+
+                                &nbsp;
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <table id="ctl00_ContentPlaceHolder1_tblLogin" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="col3">
+
+	<tr>
+
+		<td colspan="2">
+
+                                            <p>
+
+                                                <h2>
+
+                                                    Login</h2>
+
+                                            </p>
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td>
+
+                                            <div id="ctl00_ContentPlaceHolder1_ValidationSummary1" style="color:Red;background-color:White;font-weight:normal;font-style:normal;display:none;">
+
+
+
+		</div>
+
+                                            
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            Email
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            <input name="ctl00$ContentPlaceHolder1$txtLoginEmail" type="text" id="ctl00_ContentPlaceHolder1_txtLoginEmail" class="signupinput" onKeyPress="doClick('ctl00_ContentPlaceHolder1_btnLogin',event)" />
+
+                                            <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator4" style="color:Red;display:none;"></span>
+
+                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1" style="color:Red;display:none;"></span>
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td width="45%">
+
+                                            Password
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            <input name="ctl00$ContentPlaceHolder1$txtLoginpwd" type="password" id="ctl00_ContentPlaceHolder1_txtLoginpwd" class="signupinput" onKeyPress="doClick('ctl00_ContentPlaceHolder1_btnLogin',event)" />
+
+                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2" style="color:Red;display:none;"></span>
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            &nbsp;
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnLogin" value="Log me in!" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnLogin&quot;, &quot;&quot;, true, &quot;vlogin&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnLogin" class="button-neutral" />
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            &nbsp;
+
+                                        </td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="2">
+
+                                            <a id="ctl00_ContentPlaceHolder1_lnkremeberMe" class="cflink" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lnkremeberMe','')">Forgot My Password</a>
+
+                                        </td>
+
+	</tr>
+
+</table>
+
+
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+
+                <td width="410" valign="top">
+
+                    <table width="80%%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                        <tr>
+
+                            <td>
+
+                                &nbsp;
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div id="ctl00_ContentPlaceHolder1_panSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_ContentPlaceHolder1_btnSubmit')" style="width:100%;">
+
+	
+
+                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="col3">
+
+                                        <tr>
+
+                                            <td>
+
+                                                <div id="signup" class="current">
+
+                                                    <h2>
+
+                                                        Register</h2>
+
+                                                    <p>
+
+                                                        To create a campaign...</p>
+
+                                                    <div class="fieldset-errors">
+
+                                                        <div id="ctl00_ContentPlaceHolder1_ValidationSummary2" style="color:Red;background-color:White;border-color:White;font-weight:normal;display:none;">
+
+
+
+	</div>
+
+                                                        <span id="ctl00_ContentPlaceHolder1_LbEmailAlreadyExists" style="color:Red;"></span>
+
+                                                    </div>
+
+                                                    <ol>
+
+                                                        <li>
+
+                                                            <label for="User_Type">
+
+                                                                Please select usertype</label>
+
+                                                            <span class="radio-option"><input id="ctl00_ContentPlaceHolder1_rbschool" type="radio" name="ctl00$ContentPlaceHolder1$usertypes" value="rbschool" checked="checked" /><label for="ctl00_ContentPlaceHolder1_rbschool">I'am a student</label></span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                            <span class="radio-option"><input id="ctl00_ContentPlaceHolder1_rbDonor" type="radio" name="ctl00$ContentPlaceHolder1$usertypes" value="rbDonor" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$rbDonor\',\'\')', 0)" /><label for="ctl00_ContentPlaceHolder1_rbDonor">I'am a Donor</label></span>
+
+                                                        </li>
+
+                                                        <li id="ctl00_ContentPlaceHolder1_lischools">
+
+                                                            <label for="user_SchoolName">
+
+                                                                I'am a student of</label>
+
+                                                            <select name="ctl00$ContentPlaceHolder1$ddlSchoolname" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlSchoolname\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlSchoolname" class="dropdownsignupinput">
+
+		<option selected="selected" value=" 0">Select School</option>
+
+		<option value="4">John F Kennedy HS</option>
+
+		<option value="5">Virginia State Beta</option>
+
+		<option value="8">Crossland High</option>
+
+		<option value="9">Michael Test Students </option>
+
+		<option value="10">Lindsey Test Group</option>
+
+		<option value="11">Test School</option>
+
+
+
+	</select>
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator9" style="color:Red;display:none;"></span>
+
+                                                        </li>
+
+                                                        <li>
+
+                                                            <label for="user_name">
+
+                                                                First Name</label>
+
+                                                            <input name="ctl00$ContentPlaceHolder1$txtFirstName" type="text" id="ctl00_ContentPlaceHolder1_txtFirstName" class="signupinput" />
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1" style="color:Red;display:none;"></span>
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3" style="color:Red;display:none;"></span>
+
+                                                        </li>
+
+                                                        <li>
+
+                                                            <label for="user_name">
+
+                                                                Last Name</label>
+
+                                                            <input name="ctl00$ContentPlaceHolder1$txtLastName" type="text" id="ctl00_ContentPlaceHolder1_txtLastName" class="signupinput" />
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator2" style="color:Red;display:none;"></span>
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator4" style="color:Red;display:none;"></span>
+
+                                                        </li>
+
+                                                        <li id="form-signup-email">
+
+                                                            <label for="user_email">
+
+                                                                Email</label>
+
+                                                            <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" id="ctl00_ContentPlaceHolder1_txtEmail" class="signupinput" />
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator3" style="color:Red;display:none;"></span>
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator5" style="color:Red;display:none;"></span>
+
+                                                        </li>
+
+                                                        <li style="margin-bottom: 14px; margin-top: -11px;">(Used for project and account notifications)
+
+                                                        </li>
+
+                                                        <li>
+
+                                                            <label for="user_password">
+
+                                                                Password</label>
+
+                                                            <input name="ctl00$ContentPlaceHolder1$txtPwd" type="password" id="ctl00_ContentPlaceHolder1_txtPwd" class="signupinput" />
+
+                                                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator7" style="color:Red;display:none;"></span>
+
+                                                            <li>
+
+                                                                <input type="hidden" value="0" name="user[send_newsletters]" class="hidden" />
+
+                                                                <span class="checkbox"><input id="ctl00_ContentPlaceHolder1_cbnewsltr" type="checkbox" name="ctl00$ContentPlaceHolder1$cbnewsltr" checked="checked" /></span>
+
+                                                                <label for="user_send_newsletters" style="width: 300px; display: inline; text-indent: hanging;">
+
+                                                                    Get the latest news and projects!</label>
+
+                                                            </li>
+
+                                                            <li><span>By signing up, you agree to our <a class="cflink" href="SitePage.aspx?pid=6">
+
+                                                                terms of use</a>.</span> </li>
+
+                                                            <li>
+
+                                                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Sign me up!" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;, &quot;&quot;, true, &quot;vsignin&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSubmit" class="button-neutral" />
+
+                                                            </li>
+
+                                                    </ol>
+
+                                                </div>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                
+
+</div>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+
+                <input name="ctl00$ContentPlaceHolder1$txtfbappid" type="text" value="232476513562277" id="ctl00_ContentPlaceHolder1_txtfbappid" style="height:0px;width:0px;" />
+
+                <td width="232" valign="top">
+
+                    <table width="90%" border="0" align="right" cellpadding="0" cellspacing="0">
+
+                        <tr>
+
+                            <td>
+
+                                &nbsp;
+
+                            </td>
+
+                            <br />
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <table>
+
+                                    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+                                    <script>
+
+
+
+
+
+                                        var id123 = document.getElementById("ctl00_ContentPlaceHolder1_txtfbappid").value;
+
+                                        // Load the SDK Asynchronously
+
+                                        (function (d) {
+
+                                            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+
+                                            if (d.getElementById(id)) { return; }
+
+                                            js = d.createElement('script'); js.id = id; js.async = true;
+
+                                            js.src = "//connect.facebook.net/en_US/all.js";
+
+                                            ref.parentNode.insertBefore(js, ref);
+
+                                        } (document));
+
+
+
+                                        // Init the SDK upon load
+
+                                        window.fbAsyncInit = function () {
+
+                                            FB.init({
+
+                                                appId: id123, // App ID
+
+                                                channelUrl: '//' + window.location.hostname + '/channel', // Path to your Channel File
+
+                                                status: true, // check login status
+
+                                                cookie: true, // enable cookies to allow the server to access the session
+
+                                                xfbml: true  // parse XFBML
+
+                                            });
+
+
+
+                                            // listen for and handle auth.statusChange events
+
+                                            FB.Event.subscribe('auth.statusChange', function (response) {
+
+                                                if (response.authResponse) {
+
+                                                    // user has auth'd your app and is logged into Facebook
+
+                                                    var uid = "http://graph.facebook.com/" + response.authResponse.userID + "/picture";
+
+
+
+                                                    FB.api('/me', function (me) {
+
+                                                        var tf2 = me.name;
+
+                                                        var tf3 = me.email;
+
+                                                        var tf4 = uid;
+
+                                                        var tf5 = me.id;
+
+
+
+                                                        window.location = "cfPassword.aspx?name=" + tf2 + '&Email=' + tf3 + '&ProfileImageLoc=' + tf4 + '&ID=' + tf5;
+
+
+
+
+
+                                                    })
+
+
+
+                                                    document.getElementById('auth-loggedout').style.display = 'none';
+
+                                                    document.getElementById('auth-loggedin').style.display = 'block';
+
+
+
+                                                } else {
+
+                                                    // user has not auth'd your app, or is not logged into Facebook
+
+                                                    document.getElementById('auth-loggedout').style.display = 'block';
+
+                                                    document.getElementById('auth-loggedin').style.display = 'none';
+
+
+
+                                                }
+
+                                            });
+
+                                            $("#auth-logoutlink").click(function () { FB.logout(function () { window.location.reload(); }); });
+
+
+
+
+
+                                        }
+
+                                    </script>
+
+                                    <div id="ctl00_ContentPlaceHolder1_fbdiv">
+
+                                        <div id="auth-status">
+
+                                            <div id="auth-loggedout">
+
+                                                <div class="fb-login-button" autologoutlink="true" scope="email,user_checkins">
+
+                                                </div>
+
+                                            </div>
+
+                                            <div id="auth-loggedin" style="display: none">
+
+                                                
+
+                                                
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </table>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+

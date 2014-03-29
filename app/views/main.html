@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>gopyt
+</title>
+<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <link href="@{'/public/stylesheets/style_cf.css'}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="@{'/public/stylesheets/style-sheet_chrome_cf.css'}" type="text/chrome/safari" />
+<link rel="stylesheet" href="@{'/public/stylesheets/nivo-slider.css'}" type="text/css" media="screen" />
+<link rel="stylesheet" href="@{'/public/stylesheets/slider.css'}" type="text/css" media="screen" />
+	<!--<link rel="stylesheet" href="css/layouts_application.css" type="text/css" media="screen" />-->
+	<link rel="stylesheet" href="@{'/public/stylesheets/frontend_forms.css'}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/browse.css'}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/all.css'}" type="text/css" media="screen" />
+	<!--[if IE 9]><link href="/public/stylesheets/all-ie-only_cf.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+	<script type="text/javascript" src="@{'/public/javascripts/jquery-1.4.3.min.js'}"></script>
+	<script type="text/javascript" src="@{'/public/javascripts/jquery.nivo.slider.pack.js'}"></script>
+	<script type="text/javascript" src="@{'/public/javascripts/all.js'}"></script>
+	<script type="text/javascript" src="@{'/public/javascripts/layouts_application.js'}"></script>
+
+
+
+	<script src="@{'/public/javascripts/SpryTabbedPanels.js'}" type="text/javascript"></script>
+	<script src="@{'/public/javascripts/SpryAccordion.js'}" type="text/javascript"></script>
+	<link href="@{'/public/stylesheets/SpryTabbedPanels.css'}" rel="stylesheet" type="text/css" />
+	<link href="@{'/public/stylesheets/SpryAccordion.css'}" rel="stylesheet" type="text/css" />
+
+
+    <!----------------------old end--------------------------->
+    <link href="@{'/public/stylesheets/style.css'}" rel="stylesheet" type="text/css" />
+	<script type="text/javascript"  src="@{'/public/javascripts/jquery.js'}"></script>
+	<script type="text/javascript" src="@{'/public/javascripts/accordionpage.js'}"></script>
+    <script src="@{'/public/javascripts/accordion.js'}" type="text/javascript"></script>
+   
+	<link href="@{'/public/stylesheets/modal.css'}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function pauseAllVideos() {
+            $("iframe").each(function () {
+                this.contentWindow.postMessage('{ "method": "pause" }', "http://player.vimeo.com");
+                window.location = "/";
+            });
+        }
+    </script>
+
+<script type="text/javascript" >
+    $(document).ready(function () {
+
+        $(".account").click(function () {
+            var X = $(this).attr('id');
+            if (X == 1) {
+                $(".submenu").hide();
+                $(this).attr('id', '0');
+            }
+            else {
+                $(".submenu").show();
+                $(this).attr('id', '1');
+            }
+
+        });
+
+        //Mouse click on sub menu
+        $(".submenu").mouseup(function () {
+            return false
+        });
+
+        //Mouse click on my account link
+        $(".account").mouseup(function () {
+            return false
+        });
+
+        //Document Click
+        $(document).mouseup(function () {
+            $(".submenu").hide();
+            $(".account").attr('id', '');
+        });
+    });
+</script>
+</head>
+<body>
+<div>
+		<!--- Header --->
+	   <div id="sticky_header"> 
+    <div id="ctl00_header" class="Mian">
+     <div class="Header">
+	  <div class="SiteLogo">
+					<a href="/"><img src="@{'/public/images/logo.png'}" height="55" width="225" /></a>
+</div>
+	   
+	   <!--- Nav --->
+	    <div class="Nav">
+		 <ul>
+		  <li><a href="/studentlist">Supporters <br /><span>fund a student</span></a></li>
+		  #{if userid}
+		  #{/if}
+		  #{else}
+		  <li><a href="CampaignCreationNew.aspx">Students <br /><span>start a contest</span></a></li>
+		  #{/else}
+		  <li style="border-right:none;"><a href="/howwework">How <br /><span>we work</span></a></li>
+		 </ul>
+		</div>
+	   <!--- /Nav --->
+	   
+	   <!-- HeaderRight --->
+	    <div class="HeaderRight">
+		#{if userId}
+        <div class="dropdown">
+                    <a class="account black" ><strong>Hi&nbsp;<span id="ctl00_lbuname">Hello</span> ▼ </strong></a>
+                        <div class="submenu">
+                            <ul class="root">
+                            <li ><a href="MyCampaigns.aspx" >My Campaigns</a></li>
+                            <li ><a href="ProfileUpdation.aspx" >My Settings</a></li>
+                            <li ><a href="UserDashboard.aspx">My Dashboard</a></li>
+                            <li ><a href="HowWeWork.aspx">Help</a></li>
+                            <li ><a id="ctl00_Logout" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Logout&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">LogOut</a></li>
+                            </ul>
+                     </div>
+
+        </div>
+		#{/if}
+		#{else}
+
+		 <a href="/signup" class="ButtonLogin" title="Login">Login</a>
+		 <a href="/signup" class="ButtonLogin" title="Sign Up">Sign Up</a>
+		  <div class="SearchBar">
+          <input name="ctl00$txtSearch" type="text" id="ctl00_txtSearch" class="SearchTextField" placeholder="Search" />
+						<input type="image" name="ctl00$ibSearch" id="ctl00_ibSearch" class="SearchButton" src="@{'/public/images/search_icon.png'}" src="" style="border-width:0px;" />
+		 #{/else}
+		  </div>
+		</div>
+	   <!--- /HeaderRight --->
+	   
+	   
+	 </div>
+	</div>
+</div>
+		<!--- Header --->
+
+
+#{doLayout /}
+ 
+        <!--- Footer --->
+		<div class="Footer">
+			<div class="Mian">
+				<div style="float:left; margin:25px 0px 0px 0px;">
+					<a href="/" title="Home">Home</a>  |   <a href="/about" title="About Us">About Us</a>  |   <a href="/howwework" title="How We work">How We work</a>  | <a href="/faq" title="FAQ">FAQ</a> |    <a href="/contactus" title="Contact us">Contact us</a>  |   <a href="/schoolforsuccess" title="GOPYT School for Success">GOPYT School for Success</a>
+				</div>
+				
+				
+				<div id="footer-2" style="float:right; margin:4px 0px 0px 0px; font-weight:normal; text-align:left;" >
+					Sign up for GOPYT News<br />
+					<input name="ctl00$txtNewsLetter" type="text" id="ctl00_txtNewsLetter" class="signupinput" placeholder="enter email" size="20" onchange="ChkAmtVal12();" style="width:170px;" />
+					<a id="ctl00_btnNewsLetter" href="javascript:__doPostBack('ctl00$btnNewsLetter','')" style="display:inline-block;width:60px;background:red; border-radius:5px; color:#fff; text-align:center; padding;2px;">Submit</a><input name="ctl00$mailchimpUrl" type="text" value="http://gopyt.us5.list-manage.com/subscribe/post?u=475558e316&amp;amp;id=4998e0b135" id="ctl00_mailchimpUrl" style="width:1px;height:1px;margin-top:0px;margin-left:0px;padding-left:1px;" /> 
+				</div>
+
+
+				<div id="footer-3" style="float:left; margin:25px 0px 0px 10px;">
+					<a href="https://www.facebook.com/Gopyt" class="BlurImg"><img src="@{'/public/images/facebook.png'}" /></a>
+					<a href="#" class="BlurImg"><img src="@{'/public/images/twitter.png'}" /></a>
+					<a href="#" class="BlurImg"><img src="@{'/public/images/gplus.png'}"/></a>
+				</div>
+
+				<div id="copyright" style="float:right; margin-right:-185px; padding:5px; margin-top:60px;">
+					<div class="SpotBlogText">&copy; Gopyt All rights reserved</div>
+				</div>
+			</div>
+		</div>
+          
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+
+			<div style="margin:0px;">
+				<div id="mc_embed_signup">
+					<form action="http://gopyt.us5.list-manage.com/subscribe/post?u=475558e316&amp;id=4998e0b135"  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width:1px;height:1px;margin-top:0px;margin-left:0px;padding-left:1px;"  required>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	 
+  
+   <!--- /Footer--->
+   
+<script type="text/javascript">
+    function ChkAmtVal12() {
+        var tf2 = document.getElementById("ctl00_txtNewsLetter");
+        var tf4 = document.getElementById("mce-EMAIL");
+        var tf6 = document.getElementById("ctl00_mailchimpUrl");
+        tf4.value = tf2.value;
+
+        if (tf6.value == "") {
+
+        } else {
+
+            document.forms["mc-embedded-subscribe-form"].submit();
+        }
+
+    }
+
+    function SignUp1() {
+        alert("a");
+        var tf4 = document.getElementById("mce-EMAIL");
+        tf4.value = "sat@a.a";
+        document.forms["mc-embedded-subscribe-form"].submit();
+    }
+</script>
+</body>
+</html>

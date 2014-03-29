@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+        
+
+
+
+<!--- InnerContent--->
+
+<div class="InnerPageHeader">
+
+        <div class="Mian">
+
+             <h1 class="InnerpageHead">
+
+      Projects</h1>
+
+        </div>
+
+    </div>
+
+<div id="ctl00_ContentPlaceHolder1_msgBoard"></div>
+
+
+
+
+
+    <div class="InnerContent">
+
+	 <div class="Mian">
+
+	 
+		#{if result}
+	   <div id="ctl00_ContentPlaceHolder1_SchollDetails" class="MyProjectTopBlock">
+
+	    
+
+		<div style="float:left; width:300px;"> <img id="ctl00_ContentPlaceHolder1_imgSchool" src="ProjImages/SchoolLogos/28_Test%20School.jpg" style="height:200px;width:300px;border-width:0px;" /> </div>
+
+	    <div style="float:left; width:600px; margin-left:15px;">
+
+		 <p><strong><span id="ctl00_ContentPlaceHolder1_lblSchoolName">${result.title}</span> </strong></p>
+
+		 <p><span id="ctl00_ContentPlaceHolder1_lblAmountRaised" style="font-size:20px;">Total Amount Raised ${result.total.formatCurrency('USD').raw()}</span> </p>
+
+		</div>
+
+	   </div>
+
+	 
+
+	 #{if student} 
+
+	  <div id="ctl00_ContentPlaceHolder1_projDiplay" class="NewsWeekDataBlock"><div class='NewsSetBlock_Projects ProfileSetMargin'>   <div class='ProfileImage'><a href=projectDetails.aspx?pid=55> <img src='ProjImages/Thumb_Img/Christine_67_55.jpg' height='174' width='174' /> </a>	  <div class='ProfileInfoNew'><strong><a href=projectDetails.aspx?pid=55>VCU Ram <br /> by <span style='font-size:11px;'>Christine JeanLouis</span></div> </div><div class='ProfilePercent'> <div class='Percentage'><span class='PercentageBar' style='width: 0%;'> </span></div><div class='PercentageText'>0 Raised | 1997 Day(s) Left</div><div class='Teaser'>Ramming Forward.</div> </div> </div><div class='NewsSetBlock_Projects ProfileSetMargin'>   <div class='ProfileImage'><a href=projectDetails.aspx?pid=63> <img src='ProjImages/Thumb_Img/TKeyah_71_63.jpg' height='174' width='174' /> </a>	  <div class='ProfileInfoNew'><strong><a href=projectDetails.aspx?pid=63>Ms. <br /> by <span style='font-size:11px;'>TKeyah Hawkins</span></div> </div><div class='ProfilePercent'> <div class='Percentage'><span class='PercentageBar' style='width: 0%;'> </span></div><div class='PercentageText'>0 Raised | 1997 Day(s) Left</div><div class='Teaser'>Hawkins</div> </div> </div></div>
+
+	 #{/if} 
+
+	 
+
+	  
+
+#{/if}
+	 </div>
+
+	</div>
+
+   <!--- /InnerContent --->
+

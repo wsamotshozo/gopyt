@@ -1,0 +1,1380 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+
+
+</title>
+    <!------------------old---------------------------->
+
+    <link href="css/style_cf.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="css/style-sheet_chrome_cf.css" type="text/chrome/safari" /><link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/slider.css" type="text/css" media="screen" />
+<!--<link rel="stylesheet" href="css/layouts_application.css" type="text/css" media="screen" />-->
+<link rel="stylesheet" href="css/frontend_forms.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/browse.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/all.css" type="text/css" media="screen" />
+<!--[if IE 9]><link href="css/all-ie-only_cf.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/all.js"></script>
+
+
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+
+
+
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" /><link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+
+
+    <!----------------------old end--------------------------->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/accordionpage.js"></script>
+    <script src="js/accordion.js" type="text/javascript"></script>
+   
+    
+    
+    
+    
+
+
+
+    <style type="text/css">
+
+
+
+/*******************************************************************************
+
+  TABLE DESIGN 
+
+*******************************************************************************/
+
+#box-table-a {
+
+	font-size: 12px;
+
+	margin: 0px auto;
+
+	text-align: left;
+
+	border: 1px solid #c1c1c1;
+
+	margin-top:1px;
+
+	width:950px;
+
+}
+
+#box-table-a th {
+
+	font-size: 13px;
+
+	font-weight: bold;
+
+	padding: 8px;
+
+	background: #CCCAB1;
+
+	border: 1px solid #FFFFFF;
+
+	color: #333;
+
+	text-align: left;
+
+}
+
+#box-table-a td {
+
+	padding: 8px;
+
+	background: none; 
+
+	border-top: 1px solid #CCC;
+
+	border: 1px solid #c1c1c1;
+
+	color: #666;
+
+	border-bottom: none !important;
+
+}
+
+#box-table-a tr:hover td {
+
+	background: #FBFBFB;
+
+	color: #333;
+
+}
+
+#box-table-a tr.footer { background: none !important; }
+
+#box-table-a tr.footer:hover td { background: none !important;  }
+
+
+
+
+
+/*******************************************************************************
+
+  PAGINATION
+
+*******************************************************************************/
+
+.pagination { border:0; margin:0px auto; padding:0; font-size:10px; }
+
+.pagination a { border:solid 1px #DEDEDE; margin-right:2px; }
+
+.pagination .previous-off, .pagination .next-off { color:#888888; display:inline-block; font-weight:normal; padding:3px 4px; }
+
+.pagination .next a,.pagination .previous a { font-weight:bold; border:solid 1px #FFFFFF; }
+
+.pagination .active{ color:#000000; font-weight:bold; display:inline-block; padding:4px 6px; }
+
+.pagination a:link, .pagination a:visited { display:inline-block; padding:3px 6px; text-decoration:none; }
+
+.pagination a:hover{ text-decoration:none; border: 1px solid #999; }
+
+
+
+ .gvPagerCss span
+
+   {
+
+       /*background-color:#DEE1E7;*/
+
+       font-size:20px;
+
+   }  
+
+   .gvPagerCss td
+
+   {
+
+       padding-left: 5px;   
+
+       padding-right: 5px;  
+
+   }
+
+</style>
+
+
+
+    
+    
+    <!-----------------drop down code------------------->    
+
+<script type="text/javascript" >
+    $(document).ready(function () {
+
+        $(".account").click(function () {
+            var X = $(this).attr('id');
+            if (X == 1) {
+                $(".submenu").hide();
+                $(this).attr('id', '0');
+            }
+            else {
+                $(".submenu").show();
+                $(this).attr('id', '1');
+            }
+
+        });
+
+        //Mouse click on sub menu
+        $(".submenu").mouseup(function () {
+            return false
+        });
+
+        //Mouse click on my account link
+        $(".account").mouseup(function () {
+            return false
+        });
+
+        //Document Click
+        $(document).mouseup(function () {
+            $(".submenu").hide();
+            $(".account").attr('id', '');
+        });
+    });
+</script>
+
+
+
+</head>
+<body>
+
+    <form name="aspnetForm" method="post" action="UserDashboard.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+
+<div>
+
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTE3MzMwOTMzNg8WAh4NSXNQYWdlUmVmcmVzaAUVMy8yNi8yMDE0IDEwOjM0OjAwIFBNFgJmD2QWAgIBD2QWBgIDDxYCHgdWaXNpYmxlaGQCBQ9kFgICAQ8PFgIeBFRleHQFBUhlbGxvZGQCBw9kFh4CAQ8PFgIeCEltYWdlVXJsBRhpbWFnZXMvcHJvZmlsZV85NXg5NS5qcGdkZAIDDw8WAh8CBQVIZWxsb2RkAgkPDxYCHwIFDEN1cnJlbnQgUmFua2RkAgsPDxYCHwIFAiMwZGQCDw8WAh8BaGQCEQ8WAh8BaGQCEw8WAh8BaGQCFQ8WAh8BaGQCFw8WAh8BaGQCGQ8WAh8BaGQCGw9kFgQCAQ88KwANAQAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnRmZGQCAw8PFgIfAWhkFgICBw8WAh8BaGQCHw9kFgICAQ88KwANAQAPFgQfBGcfBWZkZAIjD2QWAgIDDzwrAA0AZAIlD2QWAgIDDzwrAA0AZAInD2QWAgIDDzwrAA0AZBgGBS1jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGd2X1N0YXRlbWVudERldGFpbHMPZ2QFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkR3JVc2VyUGVya3MPZ2QFLGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkR3JVc2VyVHJhbnNhY3Rpb25zDzwrAAoBCGZkBSljdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJEd2Q29udHJpYnV0aW9ucw88KwAKAQhmZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFEmN0bDAwJEltYWdlQnV0dG9uMQUpY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndl9Eb25vckRldGFpbHMPZ2Tmnxkt0HtszHNjHrX14zDDaRY1Cg==" />
+
+</div>
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+var theForm = document.forms['aspnetForm'];
+
+if (!theForm) {
+
+    theForm = document.aspnetForm;
+
+}
+
+function __doPostBack(eventTarget, eventArgument) {
+
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+
+        theForm.__EVENTTARGET.value = eventTarget;
+
+        theForm.__EVENTARGUMENT.value = eventArgument;
+
+        theForm.submit();
+
+    }
+
+}
+
+//]]>
+
+</script>
+
+
+
+
+
+<script src="/WebResource.axd?d=6FJEKarZrsSug48PbjO38BUes7EifK3xIrfQeZgh4-pRA5jk_USa6dDH_c4UXpCncFC50h9t0gWUlXy9qPRSBJWLL8I1&amp;t=635199614789012606" type="text/javascript"></script>
+
+
+
+
+
+<script src="/ScriptResource.axd?d=-z6AMuxlZIhuRJ0-RnlwYGyeTj8gSNQ0OwagVm4Hghc5EvcZM21m38Lev8bntGYN2FkdEsSYvo2-7-WGUOFCeiv8fckrQRJC04NyiyrxY8-HUOM7WvBDUZHK1GuZuktdndY2FWAIXRcR6GueDFpFlEA5TCY1&amp;t=1205a9b4" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=MvmE51mBUV7KV1Upks0BBytqoa2sM-x8qiuTQL7HOsyL--tSaNWelotDkLOZQcBO-9uAWFiuhqy1JrT0vtCZSswBFK0nkF_NrfNgOUVx58Q9VmOHFM4qvciKVKQ3F_Q32fTWkC71PzkeO7394525OosEmqYF5hhMvohVr0Ln-Soq8kAE0&amp;t=2e2045e2" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+
+//]]>
+
+</script>
+
+
+
+<script src="/ScriptResource.axd?d=r2kjKwzKskJ7tudrPDHzzoyMSIJtAt_61V36nRcAS3nkMhmrc4bTWbvdmzoJNDIulUWdk1_FB1Zcmpql8EuouEN_Le5MBjvzAvLUAVht4cXDQ9hVhEF6iF1qtcQSicumX-BuGyqfUydgptAc5IhGBKpfvtrKCYfIpQBo5cYP6z_bZw4n0&amp;t=2e2045e2" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+function WebForm_OnSubmit() {
+
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+
+}
+
+//]]>
+
+</script>
+
+
+
+<div>
+
+
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDgLVmOWwCgKKoomnCQLE5KrdDwLssvLQAwLKztXaCwK2qKmqCwKl0++LDAK05c6cBwKwmvTeDgKj1deGBAKwroTbAwLkjffKCQKu9+K2DwKCuL3EBq2Bp+tkX5JvyCNubTldBxIEJ7uk" />
+
+</div>
+   
+     <script type="text/javascript">
+
+//<![CDATA[
+
+Sys.WebForms.PageRequestManager._initialize('ctl00$scriptmanager1', document.getElementById('aspnetForm'));
+
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+
+//]]>
+
+</script>
+
+
+    <div>
+       <!--- Header --->
+	   <div id="sticky_header"> 
+    
+</div>
+   <!--- /Header --->
+
+ 
+
+ <div id="sticky_header"> 
+  <div id="ctl00_head1" class="Mian">
+     <div class="Header">
+	  <div class="SiteLogo"><a href="Index.aspx"><img src="images/logo.png" height="55" width="225" /></a></div>
+	   
+	   <!--- Nav --->
+	    <div class="Nav">
+		 <ul>
+		  <li><a href="MyProjects.aspx">Supporters <br /><span>fund a student</span></a></li>
+		  <li><a href="CampaignCreationNew.aspx">Students <br /><span>start a contest</span></a></li>
+		  <li style="border-right:none;"><a href="HowWeWork.aspx">How <br /><span>we works</span></a></li>
+		 </ul>
+		</div>
+	   <!--- /Nav --->
+	   
+	   <!-- HeaderRight --->
+	    <div class="HeaderRight">
+        <div class="dropdown">
+                    <a class="account black" ><strong>Hi&nbsp;<span id="ctl00_lbuname">Hello</span> ▼ </strong></a>
+                        <div class="submenu">
+                            <ul class="root">
+                            <li ><a href="MyCampaigns.aspx" >My Campaigns</a></li>
+                            <li ><a href="ProfileUpdation.aspx" >My Settings</a></li>
+                            <li ><a href="UserDashboard.aspx">My Dashboard</a></li>
+                            <li ><a href="HowWeWork.aspx">Help</a></li>
+                            <li ><a id="ctl00_Logout" href="javascript:__doPostBack('ctl00$Logout','')">LogOut</a></li>
+                            </ul>
+                     </div>
+             
+        </div>
+
+
+		  <div class="SearchBar">
+		   
+            <input name="ctl00$txtSearch2" type="text" id="ctl00_txtSearch2" class="SearchTextField" placeholder="Search" />
+           <input type="image" name="ctl00$ImageButton1" id="ctl00_ImageButton1" class="SearchButton" src="images/search_icon.png" src="" style="border-width:0px;" />
+		
+		  </div>
+		</div>
+	   <!--- /HeaderRight --->
+	   
+	   
+	 </div>
+	</div>
+
+</div>
+
+
+
+
+   
+
+        
+
+    <!-----------------------------------------------Begin :Message board Code------------------------------------------------------->
+
+<a  href="javascript:close1();"><div id="toggleText1" class="greenbox" ><h1> &nbsp;</h1></div></a>
+
+<a  href="javascript:close2();"><div id="toggleText2" class="redbox" ><h1>&nbsp;</h1></div></a>
+
+<!-----------------------------------------------END: Message board Code------------------------------------------------------->
+
+<!-----------------------------------------------header------------------------------------------------------->
+
+<div class="projectop">
+
+<div class="projectbar2">
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+    <tr>
+
+      <td style="width:702px; vertical-align:top;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px; ">
+
+        <tr>
+
+          <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+            <tr>
+
+              <td style="width:102px;"><div class="prothumb">  <img id="ctl00_ContentPlaceHolder1_userprofImage" src="images/profile_95x95.jpg" style="height:95px;width:95px;border-width:0px;" /></div></td>
+
+              <td><div class="projectitle2"> My Account: <span id="ctl00_ContentPlaceHolder1_lbluname">Hello</span></div>
+
+          
+
+              <div class="projectitlecap"> <span id="ctl00_ContentPlaceHolder1_lblUpdates" style="color:Red;"></span></div>
+
+                </td>
+
+            </tr>
+
+          </table></td>
+
+        </tr>
+
+        <tr><div id="ctl00_ContentPlaceHolder1_msgBoard"></div>  
+
+        <tr>
+
+          <td ></td>
+
+        </tr>
+
+          <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+            <tr>
+
+              <td></td>
+
+            </tr>
+
+          </table></td>
+
+        </tr>
+
+      </table></td>
+
+      <td style="width:250px; vertical-align:top; float:left;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+        <tr>
+
+          <td width="28%">&nbsp;</td>
+
+          <td width="72%" colspan="4">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>&nbsp;</td>
+
+          <td colspan="4" align="right">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>&nbsp;</td>
+
+          <td colspan="4">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>&nbsp;</td>
+
+          <td colspan="4">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>&nbsp;</td>
+
+          <td colspan="4">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td colspan="5">
+
+            <div class="balancebg"><h2><span id="ctl00_ContentPlaceHolder1_lblSiteCredits">Current Rank</span></h2> <h1><span id="ctl00_ContentPlaceHolder1_walletBalance">#0</span></h1></div>
+
+           
+
+          </tr>
+
+        <tr>
+
+          <td>&nbsp;</td>
+
+          <td colspan="4">&nbsp;</td>
+
+        </tr>
+
+      </table></td>
+
+    </tr>
+
+  </table>
+
+</div>
+
+</div>
+
+
+
+<!-----------------------------------------------middle content------------------------------------------------------->
+
+
+
+<div id="mainbox">
+
+
+
+
+
+
+
+		<div id="TabbedPanels1" class="TabbedPanels">
+
+  <ul class="TabbedPanelsTabGroup projectabbg">
+
+    <li id="ctl00_ContentPlaceHolder1_tabMyCampaignsDetails" class="TabbedPanelsTab" tabindex="0"><a href="#"><span>My Campaigns</span></a></li>
+
+        
+
+           
+
+
+
+                
+
+
+
+
+
+                
+
+
+
+                  
+
+
+
+                 
+
+
+
+            
+
+           
+
+             
+
+
+
+   </ul>
+
+  <div class="TabbedPanelsContentGroup">
+
+  
+
+<!----------------------content tab 1-------------------->
+
+    <div id="ctl00_ContentPlaceHolder1_tabMyCampaign" class="TabbedPanelsContent">
+
+    
+
+                              
+
+    
+
+    <div class="mtitle clearfix" > My Campaigns </div>
+
+                  
+
+                    <div class="fullcontent">
+
+                    
+
+                    
+
+                   
+
+
+
+
+
+    <div>
+
+
+
+</div>
+
+                   
+
+                             <br />
+
+                                      
+
+       <table width="75%" border="0" align="right" cellpadding="0" cellspacing="0" class="icontab">
+
+                        <tr>
+
+                          <td><img src="images/success.png" width="25" height="25" /><span>- Success</span></td>
+
+                          <td><img src="images/ongoing.png" width="25" height="25" /><span>- Ongoing</span></td>
+
+                          <td><img src="images/failed.png" width="25" height="25" /><span>- Failed</span></td>
+
+                          <td><img src="images/claimed.png" width="25" height="25" /><span>- Claimed</span></td>
+
+                          <td><img src="images/approval.png" width="25" height="25" /><span>- Approved</span></td>
+
+                        </tr>
+
+                      </table>                 
+
+             
+
+                     <br />
+
+<!----------------------content-------------------->                     
+
+                    
+
+                      
+
+    </div>
+
+   
+
+   </div>
+
+        
+
+<!----------------------content tab 2-------------------->
+
+    <div id="ctl00_ContentPlaceHolder1_tabAddFunds" class="TabbedPanelsContent">
+
+    
+
+    <div class="mtitle clearfix" > Add Funds </div>
+
+    <div >
+
+
+
+    <div id="ctl00_ContentPlaceHolder1_VS_AddFunds" style="color:Red;display:none;">
+
+
+
+</div>
+
+    
+
+
+
+
+
+    </div>
+
+    
+
+    
+
+    <div class="fullcontent">
+
+    
+
+        
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+
+  <tr>
+
+     <td width="82%">
+
+    
+
+   
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="group" >
+
+  
+
+<tr>
+
+    <td  >  
+
+    <div><h2><strong>Add Funds to your Site Credits</strong></h2></div><br/>
+
+      <div>Enter the amount you would like to add to your Site Credits to fund campaigns later, with no extra payment fees. Withdraw any time! </div>
+
+</td>
+
+    <td> <input name="ctl00$ContentPlaceHolder1$txtTransfer" type="text" id="ctl00_ContentPlaceHolder1_txtTransfer" class="smallinput" />
+
+    <span id="ctl00_ContentPlaceHolder1_rfv_Transfer" style="color:Red;display:none;"></span>
+
+    <span id="ctl00_ContentPlaceHolder1_rev_Transfer" style="color:Red;display:none;"></span>
+
+     
+
+    </td>
+
+    
+
+  </tr>
+
+ 
+
+  <tr>
+
+    <td colspan="2"> <br/>
+
+      <input type="submit" name="ctl00$ContentPlaceHolder1$btnTransfer" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnTransfer&quot;, &quot;&quot;, true, &quot;AddFunds&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnTransfer" class="button-neutral" style="float:right; margin-right:10px;" />
+
+      </td>
+
+  </tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class="clear"></div>
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+   
+
+
+
+    </td>
+
+  </tr>
+
+</table>
+
+
+
+
+
+    
+
+    </div>   
+
+    
+
+       
+
+    
+
+    
+
+    
+
+    </div>
+
+   
+
+<!----------------------content tab 3-------------------->
+
+            
+
+    <div id="ctl00_ContentPlaceHolder1_tabMyTransactions" class="TabbedPanelsContent">
+
+    
+
+     <div class="mtitle clearfix" > My Transactions </div>
+
+     
+
+                  
+
+                    <div class="fullcontent" >
+
+
+
+
+
+
+
+                    
+
+    <div>
+
+
+
+</div>
+
+
+
+
+
+<div>
+
+     <a id="ctl00_ContentPlaceHolder1_CSV_Transactions" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$CSV_Transactions','')">Export to CSV</a>
+
+     
+
+     </div>
+
+            
+
+     
+
+    </div>
+
+              
+
+          </div>
+
+
+
+<!----------------------content tab 4-------------------->
+
+    <div id="ctl00_ContentPlaceHolder1_tabWidthdraw" class="TabbedPanelsContent">
+
+                   <div class="mtitle clearfix" >Withdraw Funds </div>
+
+    <div>
+
+    <div id="ctl00_ContentPlaceHolder1_VS_WithDraw" style="color:Red;display:none;">
+
+
+
+</div>
+
+    </div>
+
+    
+
+    <div class="fullcontent">
+
+    
+
+        
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+
+  <tr>
+
+     <td width="82%">
+
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="group">
+
+  
+
+<tr>
+
+    <td>    
+
+    <div><h2><strong>Withdraw Funds from my Site Credits</strong></h2></div><br/>
+
+    <div>Please enter the amount you wish to transfer to your personal account from your Site Credits <br/>(Less than or equal to Site Credit Total)</div>
+
+</td>
+
+    <td>   <input name="ctl00$ContentPlaceHolder1$txtWithdraw" type="text" id="ctl00_ContentPlaceHolder1_txtWithdraw" class="smallinput" />
+
+    <span id="ctl00_ContentPlaceHolder1_rfv_WithDraw" style="color:Red;display:none;"></span>
+
+    <span id="ctl00_ContentPlaceHolder1_rev_WithDraw" style="color:Red;display:none;"></span>
+
+    </td>
+
+  </tr>
+
+   <tr>
+
+    <td colspan="2"> <br/>
+
+      <input type="submit" name="ctl00$ContentPlaceHolder1$btnWithdraw" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnWithdraw&quot;, &quot;&quot;, true, &quot;WithDraw&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnWithdraw" class="button-neutral" style="float:right; margin-right:10px;" />
+
+      </td>
+
+  </tr>
+
+
+
+</table>
+
+    
+
+
+
+   
+
+
+
+    </td>
+
+  </tr>
+
+</table>
+
+
+
+
+
+    
+
+    </div>   
+
+    
+
+       
+
+    
+
+    
+
+    
+
+    </div>
+
+ <!----------------------content tab 5-------------------->                
+
+                  
+
+
+
+    
+
+    
+
+
+
+ 
+
+               
+
+                 
+
+
+
+                 
+
+                 
+
+ <!----------------------content tab 6-------------------->         
+
+    <div id="ctl00_ContentPlaceHolder1_tabperks" class="TabbedPanelsContent">
+
+       
+
+         <div class="mtitle clearfix" > User Perks: <span id="ctl00_ContentPlaceHolder1_proname12"></span> </div>
+
+                 
+
+                    <div class="fullcontent" >
+
+
+
+
+
+
+
+                    
+
+    <div>
+
+
+
+</div>
+
+
+
+ <div>
+
+                  <a id="ctl00_ContentPlaceHolder1_CSV_perks" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$CSV_perks','')">Export to CSV</a>
+
+                  
+
+                  </div>
+
+
+
+            
+
+     
+
+    </div>
+
+              
+
+          </div>
+
+
+
+<!----------------------content tab 7-------------------->
+
+
+
+          <!------------- donor details  Start ---------------->
+
+     <div id="ctl00_ContentPlaceHolder1_tabDonors" class="TabbedPanelsContent">
+
+<div class="mtitle clearfix" >Contributer details: <span id="ctl00_ContentPlaceHolder1_lblprojectname"></span></div>
+
+
+
+  <div class="fullcontent" >
+
+   <div>
+
+
+
+</div>
+
+   <div> 
+
+          <a id="ctl00_ContentPlaceHolder1_btnCSV" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$btnCSV','')">Export to CSV</a></div>
+
+                                       
+
+  </div>
+
+</div>
+
+                 
+
+
+
+        <!------------- donor details  End ---------------->
+
+
+
+          <!------------- Statement details  Start ---------------->
+
+          <div id="ctl00_ContentPlaceHolder1_tabstatements" class="TabbedPanelsContent">
+
+
+
+          <div class="mtitle clearfix" >Statement details:<span id="ctl00_ContentPlaceHolder1_lblproname"></span> </div>
+
+          <div class="fullcontent" >
+
+          <div>
+
+
+
+</div>
+
+          </div>
+
+          </div>
+
+           <!------------- Statement details  End ---------------->
+
+
+
+       </div>   
+
+          
+
+          </div>
+
+    
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+
+</script>
+
+    
+
+
+
+
+
+
+
+</div>
+
+<!-----------------------------------------------middle content end------------------------------------------------------->
+
+<div class="clearfix"></div>
+
+
+
+
+ 
+        <!--- Footer --->
+    <div class="Footer">
+	 <div class="Mian">
+
+           <div style="float:right; margin:4px 0px 0px 0px; font-weight:normal; text-align:left;" >
+        Sign up for GOPYT News<br />
+         <input name="ctl00$txtNewsLetter" type="text" id="ctl00_txtNewsLetter" class="signupinput" placeholder="enter email" size="20" onchange="ChkAmtVal12();" style="width:170px;" />
+         <a id="ctl00_btnNewsLetter" href="javascript:__doPostBack('ctl00$btnNewsLetter','')" style="display:inline-block;width:60px;background:red; border-radius:5px; color:#fff; text-align:center; padding;2px;">Submit</a><input name="ctl00$mailchimpUrl" type="text" value="http://gopyt.us5.list-manage.com/subscribe/post?u=475558e316&amp;amp;id=4998e0b135" id="ctl00_mailchimpUrl" style="width:1px;height:1px;margin-top:0px;margin-left:0px;padding-left:1px;" /> 
+         </div>
+
+
+	    <div style="float:left; margin:25px 0px 0px 0px;"><a href="Index.aspx" title="Home">Home</a>  |   <a href="AboutUs.aspx" title="About Us">About Us</a>  |   <a href="HowWeWork.aspx" title="How We work">How We work</a>  | <a href="Faqs.aspx" title="FAQ">FAQ</a> |    <a href="ContactUs.aspx" title="Contact us">Contact us</a>  |   <a href="SchoolforSuccess.aspx" title="GOPYT School for Success">GOPYT School for Success</a>    </div>
+
+	   
+        <div style="float:left; margin:25px 0px 0px 10px;">
+	    <a href="https://www.facebook.com/Gopyt" class="BlurImg"><img src="images/facebook.png" /></a>
+		<a href="#" class="BlurImg"><img src="images/twitter.png" /></a>
+		<a href="#" class="BlurImg"><img src="images/gplus.png" /></a>
+		<a href="http://instagram.com/gopyt?ref=badge" class="BlurImg"><img src="images/instagram.png" /></a>
+	   </div>
+
+           <div style="float:right; margin-right:-185px; padding:5px; margin-top:60px;">
+         <div class="SpotBlogText"> @Gopyt All rights reserved</div>
+           </div>
+       
+
+	  
+	   </div>
+      
+          </div>
+          
+    
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_VS_AddFunds"), document.getElementById("ctl00_ContentPlaceHolder1_VS_WithDraw"));
+
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_rfv_Transfer"), document.getElementById("ctl00_ContentPlaceHolder1_rev_Transfer"), document.getElementById("ctl00_ContentPlaceHolder1_rfv_WithDraw"), document.getElementById("ctl00_ContentPlaceHolder1_rev_WithDraw"));
+
+//]]>
+
+</script>
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+var ctl00_ContentPlaceHolder1_VS_AddFunds = document.all ? document.all["ctl00_ContentPlaceHolder1_VS_AddFunds"] : document.getElementById("ctl00_ContentPlaceHolder1_VS_AddFunds");
+
+ctl00_ContentPlaceHolder1_VS_AddFunds.validationGroup = "AddFunds";
+
+var ctl00_ContentPlaceHolder1_rfv_Transfer = document.all ? document.all["ctl00_ContentPlaceHolder1_rfv_Transfer"] : document.getElementById("ctl00_ContentPlaceHolder1_rfv_Transfer");
+
+ctl00_ContentPlaceHolder1_rfv_Transfer.controltovalidate = "ctl00_ContentPlaceHolder1_txtTransfer";
+
+ctl00_ContentPlaceHolder1_rfv_Transfer.errormessage = "Enter Amount to be Added";
+
+ctl00_ContentPlaceHolder1_rfv_Transfer.display = "None";
+
+ctl00_ContentPlaceHolder1_rfv_Transfer.validationGroup = "AddFunds";
+
+ctl00_ContentPlaceHolder1_rfv_Transfer.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+
+ctl00_ContentPlaceHolder1_rfv_Transfer.initialvalue = "";
+
+var ctl00_ContentPlaceHolder1_rev_Transfer = document.all ? document.all["ctl00_ContentPlaceHolder1_rev_Transfer"] : document.getElementById("ctl00_ContentPlaceHolder1_rev_Transfer");
+
+ctl00_ContentPlaceHolder1_rev_Transfer.controltovalidate = "ctl00_ContentPlaceHolder1_txtTransfer";
+
+ctl00_ContentPlaceHolder1_rev_Transfer.errormessage = "Currency must be a Numeric";
+
+ctl00_ContentPlaceHolder1_rev_Transfer.display = "None";
+
+ctl00_ContentPlaceHolder1_rev_Transfer.validationGroup = "AddFunds";
+
+ctl00_ContentPlaceHolder1_rev_Transfer.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+
+ctl00_ContentPlaceHolder1_rev_Transfer.validationexpression = "^[\\d,]+(\\.\\d{1,5})?$";
+
+var ctl00_ContentPlaceHolder1_VS_WithDraw = document.all ? document.all["ctl00_ContentPlaceHolder1_VS_WithDraw"] : document.getElementById("ctl00_ContentPlaceHolder1_VS_WithDraw");
+
+ctl00_ContentPlaceHolder1_VS_WithDraw.validationGroup = "WithDraw";
+
+var ctl00_ContentPlaceHolder1_rfv_WithDraw = document.all ? document.all["ctl00_ContentPlaceHolder1_rfv_WithDraw"] : document.getElementById("ctl00_ContentPlaceHolder1_rfv_WithDraw");
+
+ctl00_ContentPlaceHolder1_rfv_WithDraw.controltovalidate = "ctl00_ContentPlaceHolder1_txtWithdraw";
+
+ctl00_ContentPlaceHolder1_rfv_WithDraw.errormessage = "Enter Amount to be WithDraw";
+
+ctl00_ContentPlaceHolder1_rfv_WithDraw.display = "None";
+
+ctl00_ContentPlaceHolder1_rfv_WithDraw.validationGroup = "WithDraw";
+
+ctl00_ContentPlaceHolder1_rfv_WithDraw.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+
+ctl00_ContentPlaceHolder1_rfv_WithDraw.initialvalue = "";
+
+var ctl00_ContentPlaceHolder1_rev_WithDraw = document.all ? document.all["ctl00_ContentPlaceHolder1_rev_WithDraw"] : document.getElementById("ctl00_ContentPlaceHolder1_rev_WithDraw");
+
+ctl00_ContentPlaceHolder1_rev_WithDraw.controltovalidate = "ctl00_ContentPlaceHolder1_txtWithdraw";
+
+ctl00_ContentPlaceHolder1_rev_WithDraw.errormessage = "Currency must be a Numeric";
+
+ctl00_ContentPlaceHolder1_rev_WithDraw.display = "None";
+
+ctl00_ContentPlaceHolder1_rev_WithDraw.validationGroup = "WithDraw";
+
+ctl00_ContentPlaceHolder1_rev_WithDraw.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+
+ctl00_ContentPlaceHolder1_rev_WithDraw.validationexpression = "^[\\d,]+(\\.\\d{1,5})?$";
+
+//]]>
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+document.getElementById('ctl00_ContentPlaceHolder1_VS_AddFunds').dispose = function() {
+
+    Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_ContentPlaceHolder1_VS_AddFunds'));
+
+}
+
+
+
+var Page_ValidationActive = false;
+
+if (typeof(ValidatorOnLoad) == "function") {
+
+    ValidatorOnLoad();
+
+}
+
+
+
+function ValidatorOnSubmit() {
+
+    if (Page_ValidationActive) {
+
+        return ValidatorCommonOnSubmit();
+
+    }
+
+    else {
+
+        return true;
+
+    }
+
+}
+
+        
+
+document.getElementById('ctl00_ContentPlaceHolder1_VS_WithDraw').dispose = function() {
+
+    Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_ContentPlaceHolder1_VS_WithDraw'));
+
+}
+
+Sys.Application.initialize();
+
+
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfv_Transfer').dispose = function() {
+
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfv_Transfer'));
+
+}
+
+
+
+document.getElementById('ctl00_ContentPlaceHolder1_rev_Transfer').dispose = function() {
+
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rev_Transfer'));
+
+}
+
+
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfv_WithDraw').dispose = function() {
+
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfv_WithDraw'));
+
+}
+
+
+
+document.getElementById('ctl00_ContentPlaceHolder1_rev_WithDraw').dispose = function() {
+
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rev_WithDraw'));
+
+}
+
+//]]>
+
+</script>
+
+</form>
+
+ <div style="margin:0px;">
+	   <div id="mc_embed_signup">
+       
+         <form action="http://gopyt.us5.list-manage.com/subscribe/post?u=475558e316&amp;id=4998e0b135"  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width:1px;height:1px;margin-top:0px;margin-left:0px;padding-left:1px;"  required>
+  
+</form>
+</div>
+	   </div>
+
+	 
+  
+   <!--- /Footer--->
+   
+<script type="text/javascript">
+    function ChkAmtVal12() {
+        var tf2 = document.getElementById("ctl00_txtNewsLetter");
+        var tf4 = document.getElementById("mce-EMAIL");
+        var tf6 = document.getElementById("ctl00_mailchimpUrl");
+        tf4.value = tf2.value;
+
+        if (tf6.value == "") {
+
+        } else {
+
+            document.forms["mc-embedded-subscribe-form"].submit();
+        }
+
+    }
+
+    function SignUp1() {
+        alert("a");
+        var tf4 = document.getElementById("mce-EMAIL");
+        tf4.value = "sat@a.a";
+        document.forms["mc-embedded-subscribe-form"].submit();
+    }
+
+   
+   
+</script>
+
+
+  
+
+
+
+
+</body>
+</html>
+

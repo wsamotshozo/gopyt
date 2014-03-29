@@ -1,0 +1,371 @@
+.searchpic{
+	margin: -25px 170px;
+	}	
+#mainboxcf{
+	margin-top:-15px!important;
+	width:1002px;
+	border-left: 1px solid rgba(0, 0, 0, 0.071);
+	border-right:1px solid rgba(0, 0, 0, 0.071);
+	box-shadow: 0 0 10px #C1C1C1;
+	-webkit-box-shadow:0 0 10px #C1C1C1;
+	-moz-box-shadow:0 0 10px #C1C1C1;
+	padding-top:7px;
+		
+		}	
+	
+#mainbox{
+	width:1002px;
+/*	border-left: 1px solid rgba(0, 0, 0, 0.071);
+	border-right:1px solid rgba(0, 0, 0, 0.071);
+	box-shadow: 0 0 10px #C1C1C1;
+	-webkit-box-shadow:0 0 10px #C1C1C1;
+	-moz-box-shadow:0 0 10px #C1C1C1;*/
+	
+		}	
+	
+#leftcon{
+   background-size: 100% 100%;
+    display: block;
+    float: left;
+    position: relative;
+  
+	}
+
+#rightcon{
+   float: right;
+    margin-right:20px;
+    position: relative;
+    width: 250px;
+	margin-top:15px !important;
+	
+	}	
+
+.projectabbg{
+ width:1002px; padding-left:-2px; height:40px; margin:0px auto; clear:both; position:absolute; z-index:1100; background:#fff; margin-top:20px;}
+
+
+.projectabbg2{
+width:990px; height:40px; margin:0px auto; clear:both; z-index:100; margin-top:10px;
+}
+
+	
+.probaricons
+{
+  
+    position: relative;
+	width: 1002px;
+    z-index:1;
+	}
+	
+.probaricons ul {
+  	float: right;
+   /* margin: 0 -450px 0 auto;*/
+	}
+.profilecon{
+	background: none repeat scroll 0 0 #E3F0FD;
+    margin-bottom: 20px;
+    padding: 25px 10px;
+    margin:0px auto;
+    width: 230px;
+	}
+	
+.perkcon ul li a{
+display: block;
+background: #eeeeee; /*background of tabs (default state)*/
+color: #404040;
+padding:20px 10px;
+color: #2d2b2b;
+text-decoration: none;
+border-top:1px solid #c1c1c1;
+}	
+	
+.submenu
+{
+background:#fff;
+position: absolute;
+top: -12px;
+left: -20px;
+z-index: 100;
+width: 135px;
+display: none;
+margin-left: 10px;
+padding: 40px 0 5px;
+/*border-radius: 6px;*/
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}	
+	
+ul.menu-tabs {
+    border: 0 none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+	margin-top:62px;
+	
+}	
+	
+.inner_content {
+	/* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+/*    border-radius: 10px 10px 10px 10px;*/
+    box-shadow: 1px 1px 2px #888888;
+    margin: 20px auto;
+    padding: 20px 20px 25px 30px;
+    width: 670px;
+	
+	
+	
+}
+
+.signupinput {
+	background: -webkit-gradient(center top, from(#F5F5F5), to(#FFFFFF)); /* for webkit browsers */
+    background: -moz-linear-gradient(center top , #F5F5F5, #FFFFFF) repeat-x scroll center top #FFFFFF;
+    border: 1px solid #CCCCCC;
+  /*  border-radius: 3px 3px 3px 3px;*/
+    color: #333333;
+    font-size: 13px;
+    margin: 0 0 10px;
+    padding: 6px 5px;
+    width: 228px;
+}
+
+
+
+.fullcontent{
+    background: -moz-linear-gradient(center top , #F2F2F2 10%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);	
+ 	border: 1px solid rgba(0, 0, 0, 0.1);
+  /*  border-radius: 10px 10px 10px 10px;*/
+    box-shadow: 1px 1px 2px #888888;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
+	padding-bottom:25px;
+	width:95%;
+	margin:25px 0px;
+
+}
+
+.fullcontent p{
+	line-height:2;
+	margin: -21px 0px 0px 0px;
+	padding:15px 0px;
+}
+	
+.video_content {
+    background: -moz-linear-gradient(center top , #F2F2F2 10%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);	
+	border: 1px solid rgba(0, 0, 0, 0.1);
+/*	border-radius: 10px 10px 10px 10px;*/
+	box-shadow: 1px 1px 2px #888888;
+    margin-bottom: 20px;
+    padding: 15px;
+
+}
+
+.inner_content {
+    background: -moz-linear-gradient(center top , #F2F2F2 10%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);
+	background-image: -o-linear-gradient(#F2F2F2,#FFFFFF);
+ 	border: 1px solid rgba(0, 0, 0, 0.1);
+/*	border-radius: 10px 10px 10px 10px;*/
+	box-shadow: 1px 1px 2px #888888;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
+	padding-bottom:25px;
+	margin:20px auto;
+}
+
+td .inner_content {
+    background: -moz-linear-gradient(center top , #F2F2F2 10%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);	
+	background-image: -o-linear-gradient(#F2F2F2,#FFFFFF);
+ 	border: 1px solid rgba(0, 0, 0, 0.1);
+/*	border-radius: 10px 10px 10px 10px;*/
+	box-shadow: 1px 1px 2px #888888;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
+	padding-bottom:25px;
+	margin:10px auto;
+}
+
+
+.col3 {
+    background: -moz-linear-gradient(center top , #F2F2F2 10%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);	
+	background-image: -o-linear-gradient(#F2F2F2,#FFFFFF);
+ 	border: 1px solid rgba(0, 0, 0, 0.1);
+/*	border-radius: 10px 10px 10px 10px;*/
+	box-shadow: 1px 1px 2px #888888;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
+	padding-bottom:25px;
+	margin:10px auto;
+
+}
+
+.fundcon{
+	background: -moz-linear-gradient(center top , #F2F2F2 10%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));/* For Mozilla/Gecko (Firefox etc) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F2F2F2, endColorstr=#FFFFFF);
+	background-image: -o-linear-gradient(#F2F2F2,#FFFFFF);
+    margin:28px auto 0px;    
+/*    float: right;*/
+    width: 220px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+/*    border-radius: 10px 10px 10px 10px;*/
+    box-shadow: 1px 1px 2px #888888;
+	}	
+	
+		
+.cfsright{
+	behavior: url(css/pie.htc);
+	float:right; 
+	background:rgba(255,204,0,0.8);
+	background: -webkit-linear-gradient(bottom, rgb(189,142,2) 38%, rgb(255,222,8) 69%);
+	position:relative; margin-top:20px; margin-right:25px; padding:10px 20px;  	
+	}
+.balancebg{
+	margin-top:-10px;
+}	
+
+
+.button-neutral {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+	margin:0px auto;
+    color: white;
+    position: relative;
+	padding: 15px 40px;
+    background:#e40000;
+	border-radius:5px;
+}
+
+.button-neutral a{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+	margin:10px 0px auto;
+    background:#e40000;
+    color: white;
+    position: relative;
+	padding: 10px 20px;
+
+}
+
+
+.button-neutral a:hover{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+	margin:10px 0px auto;
+    background:#e40000;
+    color: yellow;
+    position: relative;
+	padding: 10px 20px;
+
+}
+.claimbutton{
+   padding: 20px 35px;
+	display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+	margin:0px auto;
+    background:#e40000;
+	border-radius:5px;
+    color: white;
+    position: relative;
+
+}
+
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0px auto;
+	padding: 0px;
+	clear: none;
+	width: 100%; 
+	margin-top:-7px;
+	-webkit-margin-top:23px;	
+	margin-left:5px;
+	float:left;
+	/* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+}
+
+.linkgo{
+	float:right; margin:-29px 8px; font-size:20px; color:#fff;
+	}
+	
+.gobanlink{
+	background:#e40000;
+    box-shadow: 2px 2px 3px #c1c1c1;
+	
+} 	
+
+.styled-select select {
+/*margin-top:15px;*/
+padding-left:15px;
+}
+
+.newssearch {
+width: 260px;
+padding: 0 10px;
+height: 42px;
+float:right;
+margin-top:-10px;
+}
+.newssearch .searchform {
+margin:7px 0;
+display: inline;
+height:29px;
+}
+.newssearch .searchbutton {
+margin: 8px 0 0 0;
+background: #777;
+width:30px;
+height:26px;
+font: normal 14px/14px 'Trebuchet MS', sans-serif;
+color:#FFF;
+border: 0;
+}
+.newssearch .searchbx {
+font: italic normal 15px/15px Georgia, serif;
+color: #555;
+border: none !important;
+height: 25px;
+width: 226px;
+padding:1px 0px;
+background:#fff;
+}
+
+.main-footer .soicons {
+	width:225px; float:right;  height:55px; 
+	margin:35px -260px 0px 0px; 
+	background:#1c1c1c; border:1px solid #c1c1c1; border-radius:5px;
+	}
+	
+.main-footer .soicons img {
+	margin:15px; 	
+}
+
+.main-footer .bottom{
+	margin:30px auto 0px; margin-right:-215px; position:relative; float:right; color:#c1c1c1;
+	}

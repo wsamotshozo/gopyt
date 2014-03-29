@@ -1,0 +1,44 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+#About page
+GET	/about					Application.about
+
+#howwework page
+GET	/howwework				Application.howwework
+
+#faq page
+GET	/faq					Application.faq
+
+#contactus page
+GET	/contactus				Application.contactus
+
+#schoolforsuccess page
+GET	/schoolforsuccess			Application.schoolforsuccess
+
+#Signup page
+GET	/signup					Application.signup
+
+#setup page (i.e BootStraping)
+GET	/setup					Application.setup
+
+#setup page (i.e BootStraping)
+GET	/student				Application.student
+
+#setup page (i.e BootStraping)
+GET	/studentlist				Application.studentList
+
+#setup page (i.e BootStraping)
+GET	/project				Application.project
+
+GET     /favicon                               404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

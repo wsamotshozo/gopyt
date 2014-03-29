@@ -1,0 +1,1339 @@
+@font-face
+{
+    font-family: 'HeaveneticaCond6MedSH';
+    src: url('../fonts/hecmsh/hecmsh_-webfont.eot');
+    src: url('../fonts/hecmsh/hecmsh_-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/hecmsh/hecmsh_-webfont.woff') format('woff'), url('../fonts/hecmsh/hecmsh_-webfont.ttf') format('truetype'), url('../fonts/hecmsh/hecmsh_-webfont.svg#HeaveneticaCond6MedSH') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'journalregular';
+    src: url('../fonts/journal/journal.eot');
+    src: url('../fonts/journal/journal.eot?#iefix') format('embedded-opentype'), url('../fonts/journal/journal.woff') format('woff'), url('../fonts/journal/journal.ttf') format('truetype'), url('../fonts/journal/journal.svg#journalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face
+{
+    font-family: 'Conv_segoeui';
+    src: url(../fonts/segoeui.eot);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Conv_segoeui';
+    src: url(../fonts/segoeui.TTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: tahoma;
+    font-size: 12px;
+    background: url(../images/header_bg.jpg) repeat-x #EAE9EC;
+}
+
+img
+{
+    border: 0px;
+}
+
+h1, h2, h3, h4, h5, p, strong
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.Mian
+{
+    width: 960px;
+    margin: 0px auto;
+}
+
+.Header
+{
+    width: 100%;
+    float: left;
+    height: 70px;
+}
+
+.SiteLogo
+{
+    width: 225px;
+    float: left;
+    margin: 7px 0px 0px 0px;
+}
+
+.Nav
+{
+    width: auto;
+    float: left;
+    margin: 14px 0px 0px 94px;
+}
+
+.Nav ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.Nav li
+{
+    width: auto;
+    float: left;
+    list-style: none;
+    border-right: 1px solid #232220;
+}
+
+.Nav li a
+{
+    padding: 0px 15px 0px 15px;
+    color: #232220;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Nav li a span
+{
+    color: #0DA5AF;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+    font-size: 13px;
+    text-transform: lowercase;
+}
+
+.Nav li a:hover
+{
+    color: #0DA5AF;
+}
+
+.Nav li a:hover span
+{
+    color: #000000;
+}
+
+.HeaderRight
+{
+    width: auto;
+    float: right;
+    margin: 15px 0px 0px 0px;
+}
+
+.ButtonLogin
+{
+    width: auto;
+    float: left;
+    margin-left: 5px;
+    padding: 7px 14px 7px 14px;
+    background: #E40000;
+    font-size: 11px;
+    color: #F1F1F1;
+    display: block;
+    border-radius: 4px;
+    text-decoration: none;
+    
+    
+}
+
+.ButtonLogin:hover
+{
+    background: #11A1AA;
+}
+
+.SearchBar
+{
+    width: 140px;
+    float: left;
+    background: #5D5C5B;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.SearchTextField
+{
+    width: 92px;
+    float: left;
+    background: none;
+    color: #F1F1F1;
+    border: 0px;
+    font-size: 11px;
+    height: 24px;
+    padding-left: 5px;
+}
+
+.SearchButton
+{
+    width: 17px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.InnerPageHeader
+{
+    width: 100%;
+    float: left;
+    background: url(../images/innerpage.jpg) no-repeat top center;
+    height: 246px;
+    margin-top: 70px;
+}
+
+.InnerPageHeaderhome
+{
+    width: 100%;
+    float: left;
+    background: url(../images/newinnerpage.jpg) no-repeat top center;
+    height: 246px;
+}
+
+
+.InnerpageHead
+{
+    width: auto;
+    float: left;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 160px;
+}
+
+.InnerpageHeadProject
+{
+    width: auto;
+    float: left;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 150px;
+    font-weight: normal;
+    font-family: 'journalregular';
+}
+
+.InnerContent
+{
+    width: 100%;
+    float: left;
+    margin: 10px 0px 0px 0px;
+}
+
+.HowweworkImage
+{
+    width: 100%;
+    float: left;
+}
+
+.accordion
+{
+    width: 960px;
+    float: right;
+}
+
+.accordion ul
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.accordion ul li
+{
+    float: left;
+    list-style-type: none;
+    margin: 0 0 2px 0;
+}
+
+.accordion ul li a
+{
+    float: left;
+    color: #3F3F3E;
+    padding: 8px 0px 8px 35px;
+    width: 925px;
+    text-decoration: none;
+    white-space: pre;
+    overflow: hidden;
+    font-size: 14px;
+   /* background: url(../images/arrow_leftmenuover.png) no-repeat left #DCDCDC;*/
+        background: #DCDCDC;
+}
+
+.accordion ul li a:hover
+{
+   /* background: url(../images/arrow_leftmenuover.png) no-repeat left #DCDCDC;*/
+        background: #DCDCDC;
+    color: #000000;
+}
+
+
+
+.accordion ul li ul
+{
+    display: none;
+}
+
+.accordion ul li a.expanded
+{
+   /* background: url(../images/arrow_leftmenuover.png) no-repeat left #DCDCDC;*/
+        background: #DCDCDC;
+    color: #0E7CBD;
+}
+
+.accordion ul li ul
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.accordion ul li ul li
+{
+    float: left;
+    font-family: 'Conv_segoeui' !important;
+    background: #EAE9EC;
+    width: 100%;
+}
+
+.accordion ul li ul li div
+{
+    float: left;
+    color: #000000;
+}
+
+.accordion ul li ul li div a
+{
+    text-decoration: none;
+    color: #990000 !important;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto !important;
+}
+
+.accordion ul li ul li div a:hover
+{
+    text-decoration: none;
+    color: #4C0000 !important;
+    background: none;
+}
+
+
+.DataInnerDivContact
+{
+    width: auto;
+    float: left;
+    margin: 15px;
+    color: #4F4F4F;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.controldiv
+{
+    width: 100%;
+    float: left;
+    margin: 10px 0px 0px 0px;
+}
+
+.lable
+{
+    font-family: 'Conv_segoeui' !important;
+    display: inline-block;
+    width: 200px;
+    margin-left: 50px;
+    vertical-align: top;
+    padding-top: 8px;
+}
+.textbox
+{
+    font-family: 'Conv_segoeui' !important;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    font-size: 13px;
+    margin: 0 0 10px;
+    padding: 6px 5px;
+    width: 370px;
+}
+
+.errorMessage
+{
+    color: Red;
+    vertical-align: top;
+    padding-top: 8px;
+    font-weight: bold;
+    margin-left:10px;
+    display:inline-block;
+}
+
+.ContactButton
+{
+    cursor: pointer;
+    -webkit-appearance: button;
+    top: 0px;
+    left: 0px;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px 252px;
+    color: white;
+    position: relative;
+    padding: 15px 40px;
+    background: #e40000;
+    border-radius: 5px;
+}
+
+.DataInnerDiv
+{
+    width: auto;
+    float: left;
+    color: #4F4F4F;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+        padding: 15px 35px;
+}
+
+.DataInnerDiv_new
+{
+    float: left;
+    padding: 15px 35px;
+    color: #4F4F4F;
+    font-size: 18px;
+    background: #ffffff;
+    line-height: 30px;
+    width: 890px;
+    text-align: justify;
+}
+
+.DataInnerDiv_newB
+{
+    float: left;
+    padding: 15px;
+    color: #4F4F4F;
+    font-size: 18px;
+    background: #DCDCDC;
+    line-height: 30px;
+    width: 930px;
+    text-align: justify;
+}
+
+.Footer
+{
+    width: 100%;
+    float: left;
+    background: url(../images/footer_bg.jpg);
+    font-size: 15px;
+    margin-top: 16px;
+    font-weight:bold;
+    bottom:0;
+    position:relative;
+}
+
+
+.Footer a
+{
+    /*color: #565656;*/
+    color:Red;
+    text-decoration: none;
+    font-family: 'Conv_segoeui' !important;
+}
+
+.Footer a:hover
+{
+    /*color: #565656;*/
+    color:Blue;
+    text-decoration: underline;
+}
+
+.BlurImg
+{
+    opacity: 2.5;
+    margin-left: 5px;
+}
+
+.BlurImg:hover
+{
+    opacity: 0.5;
+}
+
+.accordionnewp
+{
+    width: 960px;
+    float: right;
+}
+
+.accordionnewp ul
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.accordionnewp ul li
+{
+    float: left;
+    list-style-type: none;
+    margin: 0 0 10px 0;
+}
+
+.accordionnewp ul li a
+{
+    float: left;
+    color: #3F3F3E;
+    padding: 8px 0px 8px 20px;
+    width: 940px;
+    text-decoration: none;
+    white-space: pre;
+    overflow: hidden;
+    font-size: 14px;
+    background: #DCDCDC;
+}
+
+.accordionnewp ul li a:hover
+{
+    background: #DCDCDC;
+    color: #000000;
+}
+
+
+
+.accordionnewp ul li ul
+{
+    display: none;
+}
+
+.accordionnewp ul li a.expanded
+{
+    background: #DCDCDC;
+    color: #0E7CBD;
+}
+
+.accordionnewp ul li ul
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.accordionnewp ul li ul li
+{
+    float: left;
+    font-family: 'Conv_segoeui' !important;
+    background: #EAE9EC;
+    width: 100%;
+}
+
+.accordionnewp ul li ul li div
+{
+    float: left;
+    color: #000000;
+}
+
+.accordionnewp ul li ul li div a
+{
+    text-decoration: none;
+    color: #990000 !important;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto !important;
+}
+
+.accordionnewp ul li ul li div a:hover
+{
+    text-decoration: none;
+    color: #4C0000 !important;
+    background: none;
+}
+
+.WhiteClass 
+{
+        background: #FFF !important;
+        display:block;
+}
+
+
+
+.BannerContainer
+{
+    width: 100%;
+    float: left;
+    /*background: url(../images/imagedoc-darknoise.png) no-repeat center top;*/
+       /* background: url(../images/bannerimage.jpg) no-repeat center top;*/
+  
+    font-family: 'HeaveneticaCond6MedSH';
+    padding-top:70px;
+}
+
+.BannerPlayLeft
+{
+    width: auto;
+    float: left;
+   /* margin: 325px 0px 0px 0px;*/
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+	font-weight:bold;
+	margin-top:-88px;
+}
+
+.BannerPlayRight
+{
+    width: auto;
+    float: right;
+  /*  margin: 325px 0px 0px 0px;*/
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+	font-weight:bold;
+	margin-top:-88px;
+	/*margin-right:-35px;*/
+}
+
+.FudingBlock
+{
+    width: 100%;
+    float: left;
+    background: url(../images/banner_blue.jpg) repeat-x;
+    height: 114px;
+}
+
+.CommunityText
+{
+    float: left;
+    width: 585px;
+    margin-top: 25px;
+}
+
+.CommunitySearchBlock
+{
+    width: 290px;
+    float: right;
+    margin: 33px 0px 0px 0px;
+    background: #ffffff;
+    border-radius: 19px;
+    padding: 10px;
+}
+
+.CommunityListFiled
+{
+    width: 255px;
+    float: left;
+    color: #8C8C8C;
+    font-family: Calibri;
+    font-size: 12px;
+    height: 20px;
+    border: none;
+    padding: 2px 3px 2px 5px;
+    text-transform: uppercase;
+}
+
+.SpotLighMenu
+{
+    width: 140px;
+    float: left;
+    margin: 50px 0px 0px 0px;
+    
+}
+
+.SpotLighMenu ul
+{
+    margin: 0px;
+    padding: 0px;
+   
+}
+
+.SpotLighMenu li
+{
+    width: 160px;
+    float: left;
+    list-style: none;
+    font-size: 11px;
+    font-family: 'Conv_segoeui';
+    margin: 3px 0px 6px 0px;
+     font-size: 15px;
+}
+
+.SpotLighMenu li a
+{
+    padding: 0px 0px 0px 15px;
+    text-decoration: none;
+    background: url(../images/spotlightmenu.png) no-repeat left center;
+    width: 125px;
+    color: black;
+}
+
+.SpotLighMenu li a:hover
+{
+    background: url(../images/spotlightmenu_over.png) no-repeat left center;
+    color: #188088;
+}
+
+.SpotLightRight
+{
+    width: 790px;
+    float: right;
+    margin: 15px 0px 0px 0px;
+}
+
+.SpotLightHead
+{
+    width: 100%;
+    float: left;
+    font-family: 'Conv_segoeui';
+    text-transform: uppercase;
+    color: #00737B;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.SpotLightBlock
+{
+    width: 100%;
+    float: left;
+    margin: 13px 0px 0px 0px;
+}
+
+.SpotLightImage
+{
+    width: 371px;
+    float: left;
+}
+
+.SpotLightBlog
+{
+    width: 800px;
+    float: left;
+}
+
+.SpotLightBlog img
+{
+    margin-right:20px;
+}
+
+.SpotLightSubHead
+{
+   float: left;
+    font-family: Tahoma;
+    color: #00737B;
+    font-size: 14px;
+    font-weight: normal;
+    
+}
+
+.SpotBlogText
+{        
+    font-size: 13px;
+    color: #000000;
+    font-family: 'Conv_segoeui';
+    margin-top: 10px;
+    
+}
+
+.Percentage
+{
+    width: 100%;
+    float: left;
+    height: 6px;
+    background: #D0D5CB;
+    
+}
+
+.PercentageBar
+{
+    width: 0%;
+    float: left;
+    background: #3CA2A9;
+    height: 6px;
+    
+}
+
+.PercentageText
+{
+    width: 100%;
+    float: left;
+    margin-top: 7px;
+    color: #068C95;
+    font-size: 12px;
+    font-family: Calibri;
+    
+}
+
+.NewWeekBlock
+{
+    width: 100%;
+    float: left;
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+}
+
+.NewsWeekDataBlock
+{
+    width: 100%;
+    float: left;
+    margin: 10px 0px 0px 0px;
+}
+
+.NewsSetBlock
+{
+    width: 174px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid #D0D5CB;
+    float: left;
+     height: 250px;
+}
+
+
+
+.ProfileImage
+{
+    width: 174px;
+    float: left;
+    position: relative;
+  
+/*    height: 115px; */
+}
+
+.ProfileInfo
+{
+    width: 98%;
+    position: absolute;
+    bottom: -72px;
+    padding: 4px 0px 4px 4px;
+    font-family: Calibri;
+    color: #ffffff;
+    font-size: 12px;
+    background: url(../images/profile_bg.png) repeat;
+}
+
+.ProfileInfo a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ProfileInfo a:hover
+{
+    color: #00A0AB;
+    text-decoration: none;
+}
+
+.ProfilePercent
+{
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.PrifileSetRight
+{
+    float: right;
+}
+
+.ProfileSetMargin
+{
+    margin-left: 10px;
+}
+
+.MyProjectTopBlock
+{
+    width: 100%;
+    float: left;
+    font-family: 'Conv_segoeui';
+    text-transform: uppercase;
+    color: #00737B;
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.ProjectDetail_left
+{
+    width: 737px;
+    float: left;
+}
+
+.ProjectDetailTopProfile
+{
+    width: 152px;
+    float: right;
+    font-family: 'Conv_segoeui';
+    color: #4D4E4E;
+    font-size: 11px;
+    text-align: right;
+}
+
+.ProjectDetailTopProfile a
+{
+    color: #017880;
+    text-decoration: none;
+}
+
+.ProjectDetailTopProfile a:hover
+{
+    color: #017880;
+    text-decoration: underline;
+}
+
+.ImageProfileDetail
+{
+    width: 112px;
+    float: right;
+    padding: 5px;
+    background: #F7F7F7;
+    border: 1px solid #D3D3D4;
+}
+
+.UpperTopProfileHead
+{
+    width: 512px;
+    float: left;
+    font-family: 'Conv_segoeui';
+    margin-top: 30px;
+    color: #545454;
+    font-size: 14px;
+}
+
+.UpperTopProfileHeadText
+{
+    width: 100%;
+    float: left;
+    color: #007D85;
+    font-family: 'HeaveneticaCond6MedSH';
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+
+.ProjectDetailPageTabs
+{
+    width: 100%;
+    float: left;
+    margin: 20px 0px 0px 0px;
+}
+
+.ProjectDetailPageTabs ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.ProjectDetailPageTabs li
+{
+    width: auto;
+    float: left;
+    list-style: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Conv_segoeui';
+    margin-left: 7px;
+}
+
+.ProjectDetailPageTabs li a
+{
+    background: #CDCDCF;
+    display: block;
+    text-decoration: none;
+    color: #606060;
+    padding: 8px 14px 8px 14px;
+}
+
+.ProjectDetailPageTabs li a:hover
+{
+    background: #F4F4F7;
+    color: #007D85;
+}
+
+.TabsInnerProject
+{
+    width: 735px;
+    float: left;
+    background: #F4F4F7;
+    border: 1px solid #BABABA;
+    font-family: 'Conv_segoeui';
+}
+
+
+.ProjectDataBlockinnner
+{
+    width: 650px;
+    float: left;
+    margin: 17px 0px 0px 44px;
+}
+
+.VideoImage
+{
+    width: 649px;
+    float: left;
+}
+
+.gaugesBlock
+{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.GaugesSet
+{
+    width: 200px;
+    float: left;
+    background: #EFEFF0;
+    padding: 10px 0px 10px 0px;
+    background: #EEEEEF;
+    text-align: center;
+    font-family: Calibri;
+    color: #248B92;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.GaguesImages
+{
+    width: 122px;
+    float: left;
+    margin: 10px 0px 10px 40px;
+}
+
+.GPdive
+{
+    width: 100%;
+    float: left;
+}
+
+
+.ProjectTextinnerBlock
+{
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    color: #474949;
+    font-size: 12px;
+}
+
+.ProjectTextinnerBlock h1
+{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #00636A;
+    font-family: 'journalregular';
+}
+
+.ProjectTextinnerBlock p
+{
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    line-height: 16px;
+}
+
+.ServicesProject
+{
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.ServicesProject h1
+{
+    width: 100%;
+    float: left;
+    font-size: 39px;
+    color: #00636A;
+    font-family: 'journalregular';
+}
+
+.ServicesProjectTextBlock
+{
+    width: 480px;
+    float: left;
+    font-size: 12px;
+    color: #474949;
+    margin-top: 10px;
+    line-height: 14px;
+}
+
+.ServicesProjectPrffile
+{
+    width: 150px;
+    float: right;
+    background: #FFFFFF;
+    padding: 2px;
+    border: 1px solid #D4D4D4;
+    margin-top: 5px;
+    height: 188px;
+}
+
+.ProjectColor
+{
+    font-weight: normal;
+    color: #047C84;
+}
+
+
+.RightProjectBlock
+{
+    width: 202px;
+    float: right;
+}
+
+
+.ProjectDetail_Right
+{
+    width: 182px;
+    float: right;
+    background: #F4F4F7;
+    padding: 10px;
+}
+
+.ProjectBtm
+{
+    width: 182px;
+    float: left;
+    margin-top: 10px;
+}
+
+.ProjectBtm a
+{
+    background: url(../images/button_bg.jpg) no-repeat;
+    height: 25px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Calibri;
+    padding: 10px 0px 0px 10px;
+    width: 172px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.ProjectBtm a:hover
+{
+    background: url(../images/button_bgover.jpg) no-repeat;
+}
+
+.ProStyle
+{
+    color: #007D85;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ProStyle_A
+{
+    color: #505050;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ProStyle_B
+{
+    color: #007D85;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 18px;
+    float: left;
+}
+
+.ProStyle_C
+{
+    color: #007D85;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    float: left;
+}
+
+.ProStyle_D
+{
+    color: #007D85;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 7px;
+    float: left;
+    text-align: center;
+}
+
+.ProStyle_E
+{
+    color: black;
+    width: 100%;
+    font-size: 11px;
+    margin-top: 7px;
+    float: left;
+}
+
+.ProStyle_F
+{
+    color: #007D85;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 7px;
+    float: left;
+}
+
+.PtextField
+{
+    width: 70px;
+    height: 16px;
+    background: #E5E5E5;
+    border: 1px solid #D7D7D7;
+    padding-left: 3px;
+    line-height: 16px;
+    color: #323232;
+    font-size: 12px;
+}
+
+
+.GaugesSet_right
+{
+    width: 202px;
+    float: left;
+    background: #F4F4F7;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    font-family: Calibri;
+    color: #248B92;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ShareBlock
+{
+    width: 625px;
+    float: left;
+    background: #F4F4F4;
+    padding: 12px 15px 12px 10px;
+    border: 1px solid #CBCBCB;
+    margin: 15px 0px 0px 10px;
+}
+
+.ShareImage
+{
+    opacity: 3.4;
+    float: left;
+}
+
+.ShareImage:hover
+{
+    opacity: 0.7;
+}
+
+.ShareData
+{
+    width: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+.ShareNumber
+{
+    width: auto;
+    float: left;
+    margin-left: 5px;
+}
+
+.ShaerNumberLeft
+{
+    width: 10px;
+    float: left;
+    background: url(../images/shaer_left.png) no-repeat;
+    height: 22px;
+}
+
+.ShaerNumberRight
+{
+    width: auto;
+    float: left;
+    background: url(../images/share_right.png) no-repeat right;
+    height: 22px;
+    font-size: 11px;
+    font-family: Calibri;
+    color: #636363;
+    line-height: 22px;
+    padding-right: 5px;
+}
+.bgnone
+{
+     margin:0 auto; background:none; border:none; color:#fff;
+    }
+
+#sticky_header{
+background: url(../images/header_bg.jpg) repeat-x #EAE9EC;
+position:fixed;
+
+width:100%;
+margin:0 auto;
+padding:0 auto;
+z-index: 1 ;
+}
+
+.ProfileInfoNew {
+background: url("../images/profile_bg.png") repeat scroll 0 0 transparent;
+bottom: -135px;
+color: hsl(0, 0%, 100%);
+font-family: Calibri;
+font-size: 12px;
+padding: 4px 0 4px 4px;
+position: absolute;
+width: 98%;
+
+}
+
+.ProfileInfoNew a
+{
+color:White;
+} 
+
+.Teaser {
+color: #000;
+float: left;
+font-family: Calibri;
+font-size: 12px;
+margin-top: 7px;
+width:85%;
+margin:0 auto;
+padding:0 auto;
+height:45px;
+line-height:15px;
+overflow:hidden;
+} 
+
+
+.NewsSetBlock_Projects
+{
+    width: 174px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid #D0D5CB;
+    float: left;
+     height: 315px;
+}
+
+

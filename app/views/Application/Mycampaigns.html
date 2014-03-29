@@ -1,0 +1,756 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+
+
+</title>
+    <!------------------old---------------------------->
+
+    <link href="css/style_cf.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="css/style-sheet_chrome_cf.css" type="text/chrome/safari" /><link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/slider.css" type="text/css" media="screen" />
+<!--<link rel="stylesheet" href="css/layouts_application.css" type="text/css" media="screen" />-->
+<link rel="stylesheet" href="css/frontend_forms.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/browse.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/all.css" type="text/css" media="screen" />
+<!--[if IE 9]><link href="css/all-ie-only_cf.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/all.js"></script>
+
+
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+
+
+
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" /><link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+
+
+    <!----------------------old end--------------------------->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/accordionpage.js"></script>
+    <script src="js/accordion.js" type="text/javascript"></script>
+   
+    
+    
+    
+    
+
+    <script type="text/javascript">
+
+     function setText() {
+
+         if (confirm("Press ok to Delete")) {
+
+             return true;
+
+         }
+
+         return false;
+
+     }
+
+</script> 
+
+
+
+<style type="text/css">
+
+ .gvPagerCss span
+
+   {
+
+       /*background-color:#DEE1E7;*/
+
+       font-size:20px;
+
+   }  
+
+   .gvPagerCss td
+
+   {
+
+       padding-left: 5px;   
+
+       padding-right: 5px;  
+
+   }
+
+</style>
+
+
+
+
+
+    
+    
+    <!-----------------drop down code------------------->    
+
+<script type="text/javascript" >
+    $(document).ready(function () {
+
+        $(".account").click(function () {
+            var X = $(this).attr('id');
+            if (X == 1) {
+                $(".submenu").hide();
+                $(this).attr('id', '0');
+            }
+            else {
+                $(".submenu").show();
+                $(this).attr('id', '1');
+            }
+
+        });
+
+        //Mouse click on sub menu
+        $(".submenu").mouseup(function () {
+            return false
+        });
+
+        //Mouse click on my account link
+        $(".account").mouseup(function () {
+            return false
+        });
+
+        //Document Click
+        $(document).mouseup(function () {
+            $(".submenu").hide();
+            $(".account").attr('id', '');
+        });
+    });
+</script>
+
+
+
+</head>
+<body>
+
+    <form name="aspnetForm" method="post" action="MyCampaigns.aspx" id="aspnetForm">
+
+<div>
+
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ4OTIzNDE2MQ9kFgJmD2QWAgIBD2QWBgIDDxYCHgdWaXNpYmxlaGQCBQ9kFgICAQ8PFgIeBFRleHQFBUhlbGxvZGQCBw9kFgwCAw8PFgIeCEltYWdlVXJsBRhpbWFnZXMvcHJvZmlsZV85NXg5NS5qcGdkZAIFDw8WAh8BBQVIZWxsb2RkAgcPPCsADQEADxYEHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50ZmRkAgkPPCsADQEADxYEHwNnHwRmZGQCCw88KwANAQAPFgQfA2cfBGZkZAINDzwrAA0BAA8WBB8DZx8EAgFkFgJmD2QWCGYPDxYCHwBoZGQCAQ9kFgJmD2QWDgIBDw8WAh8CBRppbWFnZXMvcHJvZmlsZV8yMjB4MTk0LmpwZ2RkAgMPDxYEHwEFEFVudGl0bGVkIFByb2plY3QeC1Bvc3RCYWNrVXJsBRpQcm9qZWN0RGV0YWlscy5hc3B4P3BpZD03M2RkAgUPDxYEHwEFBUhlbGxvHwUFF1VzZXJQcm9maWxlLmFzcHg/dWlkPTg3ZGQCBw8PFgQfAQUFV29ybGQfBQUXVXNlclByb2ZpbGUuYXNweD91aWQ9ODdkZAILDw8WBB4PQ29tbWFuZEFyZ3VtZW50BQI3Mx8FBSFQcm9qZWN0RGV0YWlscy5hc3B4P21vZGU9cCZwaWQ9NzNkZAINDw8WBB8GBQI3Mx8FBRhDYW1wYWlnbkNyZWF0aW9uTmV3LmFzcHhkZAIPDw8WAh8GBQI3M2RkAgIPDxYCHwBoZGQCAw8PFgIfAGhkZBgFBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUSY3RsMDAkSW1hZ2VCdXR0b24xBTVjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJEdyaWRWaWV3NCRjdGwwMiRpbWdVc2VyUHJvZgUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRHcmlkVmlldzQPPCsACgEIAgFkBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJEdyaWRWaWV3Mw88KwAKAQhmZAUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRHcmlkVmlldzIPPCsACgEIZmQFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkR3JpZFZpZXcxDzwrAAoBCGZkMQ22G13Xg2AIhYdAaHICeXZocDU=" />
+
+</div>
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+var theForm = document.forms['aspnetForm'];
+
+if (!theForm) {
+
+    theForm = document.aspnetForm;
+
+}
+
+function __doPostBack(eventTarget, eventArgument) {
+
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+
+        theForm.__EVENTTARGET.value = eventTarget;
+
+        theForm.__EVENTARGUMENT.value = eventArgument;
+
+        theForm.submit();
+
+    }
+
+}
+
+//]]>
+
+</script>
+
+
+
+
+
+<script src="/WebResource.axd?d=6FJEKarZrsSug48PbjO38BUes7EifK3xIrfQeZgh4-pRA5jk_USa6dDH_c4UXpCncFC50h9t0gWUlXy9qPRSBJWLL8I1&amp;t=635199614789012606" type="text/javascript"></script>
+
+
+
+
+
+<script src="/ScriptResource.axd?d=MvmE51mBUV7KV1Upks0BBytqoa2sM-x8qiuTQL7HOsyL--tSaNWelotDkLOZQcBO-9uAWFiuhqy1JrT0vtCZSswBFK0nkF_NrfNgOUVx58Q9VmOHFM4qvciKVKQ3F_Q32fTWkC71PzkeO7394525OosEmqYF5hhMvohVr0Ln-Soq8kAE0&amp;t=2e2045e2" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+
+//]]>
+
+</script>
+
+
+
+<script src="/ScriptResource.axd?d=r2kjKwzKskJ7tudrPDHzzoyMSIJtAt_61V36nRcAS3nkMhmrc4bTWbvdmzoJNDIulUWdk1_FB1Zcmpql8EuouEN_Le5MBjvzAvLUAVht4cXDQ9hVhEF6iF1qtcQSicumX-BuGyqfUydgptAc5IhGBKpfvtrKCYfIpQBo5cYP6z_bZw4n0&amp;t=2e2045e2" type="text/javascript"></script>
+
+<div>
+
+
+
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="k1ST-TmnZFi8JjOwa45FE22sPMCn0-evjv_i2b9MmD1tAUc9nj_wRbF2nJCad0aMJ2HZ3Ubo6PagNoD1W1bJsIOyZks1" />
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDgLTopWnAQKKoomnCQLE5KrdDwLssvLQAwL/6MnfDwK83/m4DALY09imCALY07CaCALR9/SEDQKmu+OWBAL+tceCDQLkjffKCQKu9+K2DwKCuL3EBuu4b4GyMjkyCufmk7BxPHkY7b67" />
+
+</div>
+   
+     <script type="text/javascript">
+
+//<![CDATA[
+
+Sys.WebForms.PageRequestManager._initialize('ctl00$scriptmanager1', document.getElementById('aspnetForm'));
+
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+
+//]]>
+
+</script>
+
+
+    <div>
+       <!--- Header --->
+	   <div id="sticky_header"> 
+    
+</div>
+   <!--- /Header --->
+
+ 
+
+ <div id="sticky_header"> 
+  <div id="ctl00_head1" class="Mian">
+     <div class="Header">
+	  <div class="SiteLogo"><a href="Index.aspx"><img src="images/logo.png" height="55" width="225" /></a></div>
+	   
+	   <!--- Nav --->
+	    <div class="Nav">
+		 <ul>
+		  <li><a href="MyProjects.aspx">Supporters <br /><span>fund a student</span></a></li>
+		  <li><a href="CampaignCreationNew.aspx">Students <br /><span>start a contest</span></a></li>
+		  <li style="border-right:none;"><a href="HowWeWork.aspx">How <br /><span>we works</span></a></li>
+		 </ul>
+		</div>
+	   <!--- /Nav --->
+	   
+	   <!-- HeaderRight --->
+	    <div class="HeaderRight">
+        <div class="dropdown">
+                    <a class="account black" ><strong>Hi&nbsp;<span id="ctl00_lbuname">Hello</span> ▼ </strong></a>
+                        <div class="submenu">
+                            <ul class="root">
+                            <li ><a href="MyCampaigns.aspx" >My Campaigns</a></li>
+                            <li ><a href="ProfileUpdation.aspx" >My Settings</a></li>
+                            <li ><a href="UserDashboard.aspx">My Dashboard</a></li>
+                            <li ><a href="HowWeWork.aspx">Help</a></li>
+                            <li ><a id="ctl00_Logout" href="javascript:__doPostBack('ctl00$Logout','')">LogOut</a></li>
+                            </ul>
+                     </div>
+             
+        </div>
+
+
+		  <div class="SearchBar">
+		   
+            <input name="ctl00$txtSearch2" type="text" id="ctl00_txtSearch2" class="SearchTextField" placeholder="Search" />
+           <input type="image" name="ctl00$ImageButton1" id="ctl00_ImageButton1" class="SearchButton" src="images/search_icon.png" src="" style="border-width:0px;" />
+		
+		  </div>
+		</div>
+	   <!--- /HeaderRight --->
+	   
+	   
+	 </div>
+	</div>
+
+</div>
+
+
+
+
+   
+
+        
+
+<div class="InnerPageHeader">
+
+        <div class="Mian">
+
+             <h1 class="InnerpageHead">
+
+       My Campaigns</h1>
+
+        </div>
+
+    </div>
+
+    <a href="javascript:close2();">
+
+        <div id="toggleText2" class="redbox">
+
+            <h1 style="text-align:center; color:#EAE9EC; font-size:16px;">
+
+              ////////////////////////////////////////////////////////////////////////////////////////////// </h1>
+
+        </div>
+
+    </a>
+
+     <div id="ctl00_ContentPlaceHolder1_msgBoard"></div>
+
+ <div class="projectop">
+
+<div class="projectbar">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+          <tr>
+
+            <td style="width:702px; vertical-align:top;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px; ">
+
+              <tr>
+
+                <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                  <tr>
+
+                    <td style="width:102px;"> <img id="ctl00_ContentPlaceHolder1_userprofImage" src="images/profile_95x95.jpg" style="height:95px;width:95px;border-width:0px;" /></td>
+
+                    <td><div class="projectitle2"><span id="ctl00_ContentPlaceHolder1_lbluname">Hello</span></div>
+
+                    
+
+                   
+
+                    </td>
+
+                  </tr>
+
+                </table></td>
+
+              </tr>
+
+              <tr>
+
+                <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                  <tr>
+
+                    <td>
+
+                    
+
+                    
+
+                    </td>
+
+                  </tr>
+
+                </table></td>
+
+              </tr>
+
+            </table></td>
+
+            <td style="width:300px; vertical-align:top;">&nbsp;</td>
+
+          </tr>
+
+    </table>
+
+</div>
+
+</div>
+
+
+
+
+
+<div id="mainbox">
+
+
+
+<div id="TabbedPanels1" class="TabbedPanels">
+
+  <ul class="TabbedPanelsTabGroup projectabbg">
+
+    <li class="TabbedPanelsTab" tabindex="0"><a href="#"><span>Approved Campaigns</span></a></li>
+
+        <li class="TabbedPanelsTab" tabindex="0"><a href="#"><span>Rejected Campaigns</span></a></li>
+
+        <li class="TabbedPanelsTab" tabindex="0"><a href="#"><span>Completed  Campaigns</span></a></li>
+
+          <li class="TabbedPanelsTab" tabindex="0"><a href="#"><span>Waiting for Approval</span></a></li>
+
+
+
+   </ul>
+
+  <div class="TabbedPanelsContentGroup">
+
+
+
+   
+
+
+
+    <div class="TabbedPanelsContent">
+
+
+
+<div class="mtitle">Approved Campaigns</div>
+
+<br /><br />
+
+   <div class="inner_content clearfix" style="margin:0px auto;">
+
+   
+
+            <div class="full-bar clearfix">
+
+      					
+
+     				</div>
+
+
+
+        <div class="con_left2">
+
+                       <div>
+
+
+
+</div>
+
+             
+
+                    </div>     
+
+                    </div>
+
+
+
+                    <br /><br />
+
+ 
+
+</div>
+
+
+
+  <div class="TabbedPanelsContent">
+
+<div class="mtitle">Rejected Campaigns</div>
+
+<br /><br />
+
+   <div class="inner_content clearfix" style="margin:0px auto;">
+
+   
+
+            <div class="full-bar clearfix">
+
+      					
+
+     				</div>
+
+
+
+        <div class="con_left2">
+
+                       <div>
+
+
+
+</div>
+
+             
+
+                    </div>     
+
+                    </div>
+
+
+
+                    <br /><br />
+
+  </div>
+
+  <div class="TabbedPanelsContent">
+
+ <div class="mtitle">Completed Campaigns</div>
+
+<br /><br />
+
+   <div class="inner_content clearfix" style="margin:0px auto;">
+
+   
+
+            <div class="full-bar clearfix">
+
+      					
+
+     				</div>
+
+
+
+        <div class="con_left2">
+
+                       <div>
+
+
+
+</div>
+
+             
+
+                    </div>     
+
+                    </div>
+
+
+
+                    <br /><br />
+
+  </div>
+
+
+
+  <div class="TabbedPanelsContent">
+
+<div class="mtitle">Campaigns  waiting for Approval</div>
+
+<br /><br />
+
+   <div class="inner_content clearfix" style="margin:0px auto;">
+
+   
+
+            <div class="full-bar clearfix">
+
+      					
+
+     				</div>
+
+
+
+        <div class="con_left2">
+
+                       <div>
+
+	<table cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_GridView4" style="border-style:None;width:640px;border-collapse:collapse;">
+
+		<tr>
+
+			<td>
+
+                      
+
+                                    <div class="updatecon">
+
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                          <tr>
+
+                            <td width="17%"><div class="prothumb"> <input type="image" name="ctl00$ContentPlaceHolder1$GridView4$ctl02$imgUserProf" id="ctl00_ContentPlaceHolder1_GridView4_ctl02_imgUserProf" src="images/profile_220x194.jpg" style="height:95px;width:95px;border-width:0px;" />&nbsp;</div></td>
+
+                            <td width="53%" valign="middle">
+
+                           	 <a id="ctl00_ContentPlaceHolder1_GridView4_ctl02_lnkbtnproname" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GridView4$ctl02$lnkbtnproname&quot;, &quot;&quot;, false, &quot;&quot;, &quot;ProjectDetails.aspx?pid=73&quot;, false, true))">Untitled Project</a>
+
+                          
+
+                           <br/>
+
+                            	By - &nbsp;<a id="ctl00_ContentPlaceHolder1_GridView4_ctl02_LnkFname" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GridView4$ctl02$LnkFname&quot;, &quot;&quot;, false, &quot;&quot;, &quot;UserProfile.aspx?uid=87&quot;, false, true))">Hello</a>&nbsp;
+
+                                <a id="ctl00_ContentPlaceHolder1_GridView4_ctl02_LnkLname" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GridView4$ctl02$LnkLname&quot;, &quot;&quot;, false, &quot;&quot;, &quot;UserProfile.aspx?uid=87&quot;, false, true))">World</a>
+
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$GridView4$ctl02$hdProid" id="ctl00_ContentPlaceHolder1_GridView4_ctl02_hdProid" value="World" />
+
+                                
+
+                                 </td>
+
+                            <td width="30%" valign="middle" ><a href="#"></a>
+
+                            <ul class="cfbutton">
+
+                            <li><input type="submit" name="ctl00$ContentPlaceHolder1$GridView4$ctl02$ImgView" value="View" onclick="window.document.forms[0].target='_blank'; setTimeout(function(){window.document.forms[0].target='';}, 500);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GridView4$ctl02$ImgView&quot;, &quot;&quot;, false, &quot;&quot;, &quot;ProjectDetails.aspx?mode=p&amp;pid=73&quot;, false, false))" id="ctl00_ContentPlaceHolder1_GridView4_ctl02_ImgView" class="cfbutton green" /></li>
+
+                             <li> <input type="submit" name="ctl00$ContentPlaceHolder1$GridView4$ctl02$ImgEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GridView4$ctl02$ImgEdit&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CampaignCreationNew.aspx&quot;, false, false))" id="ctl00_ContentPlaceHolder1_GridView4_ctl02_ImgEdit" class="cfbutton orange" /></li>
+
+                              <li> </li>
+
+                            </ul>
+
+                            </td>
+
+                          </tr>
+
+                        </table>
+
+                         </div>
+
+                                 
+
+                                      </td>
+
+		</tr>
+
+	</table>
+
+</div>
+
+             
+
+                    </div>     
+
+                    </div>
+
+
+
+                    <br /><br />
+
+  </div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+
+      var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+
+</script>
+
+<div class="clearfix"></div>
+
+
+
+      
+
+            
+
+                  
+
+    </div>
+
+
+ 
+        <!--- Footer --->
+    <div class="Footer">
+	 <div class="Mian">
+
+           <div style="float:right; margin:4px 0px 0px 0px; font-weight:normal; text-align:left;" >
+        Sign up for GOPYT News<br />
+         <input name="ctl00$txtNewsLetter" type="text" id="ctl00_txtNewsLetter" class="signupinput" placeholder="enter email" size="20" onchange="ChkAmtVal12();" style="width:170px;" />
+         <a id="ctl00_btnNewsLetter" href="javascript:__doPostBack('ctl00$btnNewsLetter','')" style="display:inline-block;width:60px;background:red; border-radius:5px; color:#fff; text-align:center; padding;2px;">Submit</a><input name="ctl00$mailchimpUrl" type="text" value="http://gopyt.us5.list-manage.com/subscribe/post?u=475558e316&amp;amp;id=4998e0b135" id="ctl00_mailchimpUrl" style="width:1px;height:1px;margin-top:0px;margin-left:0px;padding-left:1px;" /> 
+         </div>
+
+
+	    <div style="float:left; margin:25px 0px 0px 0px;"><a href="Index.aspx" title="Home">Home</a>  |   <a href="AboutUs.aspx" title="About Us">About Us</a>  |   <a href="HowWeWork.aspx" title="How We work">How We work</a>  | <a href="Faqs.aspx" title="FAQ">FAQ</a> |    <a href="ContactUs.aspx" title="Contact us">Contact us</a>  |   <a href="SchoolforSuccess.aspx" title="GOPYT School for Success">GOPYT School for Success</a>    </div>
+
+	   
+        <div style="float:left; margin:25px 0px 0px 10px;">
+	    <a href="https://www.facebook.com/Gopyt" class="BlurImg"><img src="images/facebook.png" /></a>
+		<a href="#" class="BlurImg"><img src="images/twitter.png" /></a>
+		<a href="#" class="BlurImg"><img src="images/gplus.png" /></a>
+		<a href="http://instagram.com/gopyt?ref=badge" class="BlurImg"><img src="images/instagram.png" /></a>
+	   </div>
+
+           <div style="float:right; margin-right:-185px; padding:5px; margin-top:60px;">
+         <div class="SpotBlogText"> @Gopyt All rights reserved</div>
+           </div>
+       
+
+	  
+	   </div>
+      
+          </div>
+          
+    
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+Sys.Application.initialize();
+
+//]]>
+
+</script>
+
+</form>
+
+ <div style="margin:0px;">
+	   <div id="mc_embed_signup">
+       
+         <form action="http://gopyt.us5.list-manage.com/subscribe/post?u=475558e316&amp;id=4998e0b135"  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width:1px;height:1px;margin-top:0px;margin-left:0px;padding-left:1px;"  required>
+  
+</form>
+</div>
+	   </div>
+
+	 
+  
+   <!--- /Footer--->
+   
+<script type="text/javascript">
+    function ChkAmtVal12() {
+        var tf2 = document.getElementById("ctl00_txtNewsLetter");
+        var tf4 = document.getElementById("mce-EMAIL");
+        var tf6 = document.getElementById("ctl00_mailchimpUrl");
+        tf4.value = tf2.value;
+
+        if (tf6.value == "") {
+
+        } else {
+
+            document.forms["mc-embedded-subscribe-form"].submit();
+        }
+
+    }
+
+    function SignUp1() {
+        alert("a");
+        var tf4 = document.getElementById("mce-EMAIL");
+        tf4.value = "sat@a.a";
+        document.forms["mc-embedded-subscribe-form"].submit();
+    }
+
+   
+   
+</script>
+
+
+  
+
+
+
+
+</body>
+</html>
+
