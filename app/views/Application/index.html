@@ -46,14 +46,11 @@
 					<span style="float:right">
 						<select name="ctl00$ContentPlaceHolder1$ddlSchoolNames" id="ctl00_ContentPlaceHolder1_ddlSchoolNames" class="CommunityListFiled">
 							<option value=" 0">Supporters Start Here</option>
-							<option value="4">John F Kennedy HS</option>
-							<option value="5">Virginia State Beta</option>
-							<option value="6">North Carolina Beta</option>
-							<option value="8">Crossland High - Elizabeth</option>
-							<option value="9">Michael Test Students </option>
-							<option value="10">Lindsey Test Group</option>
-							<option value="11">Test School</option>
-							<option value="13">Hajrah Group </option>
+							#{if query}
+								#{list items:query, as:'project'}
+							<option value=${project.title}><a href='/project?id=${project.id}'>${project.title}</a></option>
+								#{/list}
+							#{/if}
 						</select>
 					</span>
 				</div>
@@ -72,6 +69,7 @@
 			</div>
 
 			<!--- /SpotLighMenu --->
+
 
 			<!--- SpotLightRight --->
 			<div class="SpotLightRight">
@@ -182,9 +180,14 @@
 						#{list items:students, as:'student'}
 					<div class='NewsSetBlock'>
 						<div class='ProfileImage'>
+							#{if student.picURL1}
+							<a href='/student?id=${student.id}'><img src=${student.picURL1} width='174' height='174'  alt=''></img></a>
+							#{/if}
+							#{else}
 							<a href='/student?id=${student.id}'><img src="@{'public/images/Thumb_Img/Dexter_54_43.jpg'}" width='174' height='174'  alt=''></img></a>
+							#{/else}
 							<div class='ProfileInfo'>
-								<strong><a href='/student?id=${student.id}'>test</a></strong><br /><span style='font-size:11px;'>by ${student.firstName} ${student.lastName}</span>
+								<strong><a href='/student?id=${student.id}'>${student.title}</a></strong><br /><span style='font-size:11px;'>by ${student.firstName} ${student.lastName}</span>
 							</div>
 						</div>
 						<div class='ProfilePercent'>
@@ -215,5 +218,6 @@
 			<!--- /NewWeekBlock --->
 		</div>
 		<!--- /SpotLightBlock --->
+<p><?php echo "It works!"; ?></p>
 
  

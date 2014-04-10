@@ -10,8 +10,7 @@
 @font-face
 {
     font-family: 'journalregular';
-    src: url('../fonts/journal/journal.eot');
-    src: url('../fonts/journal/journal.eot?#iefix') format('embedded-opentype'), url('../fonts/journal/journal.woff') format('woff'), url('../fonts/journal/journal.ttf') format('truetype'), url('../fonts/journal/journal.svg#journalregular') format('svg');
+    src: url('/public/stylesheets/journal.TTF');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,15 +19,7 @@
 @font-face
 {
     font-family: 'Conv_segoeui';
-    src: url(../fonts/segoeui.eot);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face
-{
-    font-family: 'Conv_segoeui';
-    src: url(../fonts/segoeui.TTF);
+    src: url(/public/stylesheets/segoeui.TTF);
     font-weight: normal;
     font-style: normal;
 }
@@ -1291,7 +1282,7 @@ position:fixed;
 width:100%;
 margin:0 auto;
 padding:0 auto;
-z-index: 1 ;
+z-index: 999 ;
 }
 
 .ProfileInfoNew {
@@ -1336,4 +1327,14 @@ overflow:hidden;
      height: 315px;
 }
 
+p  {
+	z-index:-1;
+}
 
+iframe  {
+	z-index:-1;
+}
+
+.VideoImage{
+	z-index:-1;
+}

@@ -217,10 +217,11 @@
 
                             <td>
 
-                                <div id="ctl00_ContentPlaceHolder1_panSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_ContentPlaceHolder1_btnSubmit')" style="width:100%;">
+                                <div id="ctl00_ContentPlaceHolder1_panSearch"  style="width:100%;">
 
 	
 
+					<form action="@{Application.register()}" method="GET">
                                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="col3">
 
                                         <tr>
@@ -269,23 +270,14 @@
 
                                                                 I'am a student of</label>
 
-                                                            <select name="ctl00$ContentPlaceHolder1$ddlSchoolname" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlSchoolname\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlSchoolname" class="dropdownsignupinput">
+                                                            <select name="school" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlSchoolname\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlSchoolname" class="dropdownsignupinput">
 
 		<option selected="selected" value=" 0">Select School</option>
-
-		<option value="4">John F Kennedy HS</option>
-
-		<option value="5">Virginia State Beta</option>
-
-		<option value="8">Crossland High</option>
-
-		<option value="9">Michael Test Students </option>
-
-		<option value="10">Lindsey Test Group</option>
-
-		<option value="11">Test School</option>
-
-
+                                        #{if query}
+                                                #{list items:query, as:'school'}
+                                                        <option value=${school.title}>${school.title}</option>
+                                                #{/list}
+                                        #{/if}
 
 	</select>
 
@@ -299,7 +291,7 @@
 
                                                                 First Name</label>
 
-                                                            <input name="ctl00$ContentPlaceHolder1$txtFirstName" type="text" id="ctl00_ContentPlaceHolder1_txtFirstName" class="signupinput" />
+                                                            <input name="firstName" type="text" id="ctl00_ContentPlaceHolder1_txtFirstName" class="signupinput" />
 
                                                             <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1" style="color:Red;display:none;"></span>
 
@@ -313,7 +305,7 @@
 
                                                                 Last Name</label>
 
-                                                            <input name="ctl00$ContentPlaceHolder1$txtLastName" type="text" id="ctl00_ContentPlaceHolder1_txtLastName" class="signupinput" />
+                                                            <input name="lastName" type="text" id="ctl00_ContentPlaceHolder1_txtLastName" class="signupinput" />
 
                                                             <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator2" style="color:Red;display:none;"></span>
 
@@ -327,7 +319,7 @@
 
                                                                 Email</label>
 
-                                                            <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" id="ctl00_ContentPlaceHolder1_txtEmail" class="signupinput" />
+                                                            <input name="email" type="text" id="email" class="signupinput" />
 
                                                             <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator3" style="color:Red;display:none;"></span>
 
@@ -345,15 +337,13 @@
 
                                                                 Password</label>
 
-                                                            <input name="ctl00$ContentPlaceHolder1$txtPwd" type="password" id="ctl00_ContentPlaceHolder1_txtPwd" class="signupinput" />
+                                                            <input name="password" type="password" id="ctl00_ContentPlaceHolder1_txtPwd" class="signupinput" />
 
                                                             <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator7" style="color:Red;display:none;"></span>
 
                                                             <li>
 
-                                                                <input type="hidden" value="0" name="user[send_newsletters]" class="hidden" />
-
-                                                                <span class="checkbox"><input id="ctl00_ContentPlaceHolder1_cbnewsltr" type="checkbox" name="ctl00$ContentPlaceHolder1$cbnewsltr" checked="checked" /></span>
+                                                                <span class="checkbox"><input id="ctl00_ContentPlaceHolder1_cbnewsltr" type="checkbox" name="sendmail" checked="true" /></span>
 
                                                                 <label for="user_send_newsletters" style="width: 300px; display: inline; text-indent: hanging;">
 
@@ -361,13 +351,13 @@
 
                                                             </li>
 
-                                                            <li><span>By signing up, you agree to our <a class="cflink" href="SitePage.aspx?pid=6">
+                                                            <li><span>By signing up, you agree to our <a class="cflink" href="/terms">
 
                                                                 terms of use</a>.</span> </li>
 
                                                             <li>
 
-                                                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Sign me up!" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;, &quot;&quot;, true, &quot;vsignin&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSubmit" class="button-neutral" />
+                                                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Sign me up!" onclick="" id="ctl00_ContentPlaceHolder1_btnSubmit" class="button-neutral" />
 
                                                             </li>
 
@@ -380,6 +370,7 @@
                                         </tr>
 
                                     </table>
+				</form>
 
                                 
 

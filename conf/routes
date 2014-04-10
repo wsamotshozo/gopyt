@@ -33,6 +33,43 @@ GET	/student				Application.student
 GET	/studentlist				Application.studentList
 
 #setup page (i.e BootStraping)
+GET     /register                                  Application.register
+
+#setup page (i.e BootStraping)
+GET     /register1                                  Application.register1
+
+#setup page (i.e BootStraping)
+GET     /register2                                  Application.register2
+
+#setup page (i.e BootStraping)
+GET     /register3                                  Application.register3
+
+#setup page (i.e BootStraping)
+GET     /register4                                  Application.register4
+
+#setup page (i.e BootStraping)
+GET     /register5                                  Application.register5
+
+#setup page (i.e BootStraping)
+GET     /register6                                  Application.register6
+
+#setup page (i.e BootStraping)
+GET     /register7                                  Application.register7
+
+#setup page (i.e BootStraping)
+GET     /login                                  Application.login
+
+#setup page (i.e BootStraping)
+GET	/terms				Application.terms
+
+
+#setup page (i.e BootStraping)
+GET	/temporary				Application.temporary
+
+#setup page (i.e BootStraping)
+GET	/basicdetails				Application.basicDetails
+
+#setup page (i.e BootStraping)
 GET	/project				Application.project
 
 GET     /favicon                               404

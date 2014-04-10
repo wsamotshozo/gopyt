@@ -33,11 +33,10 @@
 
                     <h1 class="UpperTopProfileHeadText">
 
-                        <span id="ctl00_ContentPlaceHolder1_Proj_Title">AspiringSuccess</span></h1>
+                        <span id="ctl00_ContentPlaceHolder1_Proj_Title">${result.title}</span></h1>
 
                     <p>
-
-                        by&nbsp;<span id="ctl00_ContentPlaceHolder1_uName">TAqua Whitaker</span></u></p>
+                        by&nbsp;<span id="ctl00_ContentPlaceHolder1_uName">${result.firstName} ${result.lastName}</span></u></p>
 
                 </div>
 
@@ -45,19 +44,19 @@
 
                     <div class="ImageProfileDetail">
 
-                        <img id="ctl00_ContentPlaceHolder1_ImageUserTop" src="ProjImages/Thumb_Img/TAqua_52_41.jpg" style="height:96px;width:112px;border-width:0px;" /></div>
+                        <img id="ctl00_ContentPlaceHolder1_ImageUserTop" src=${result.picURL1} style="height:96px;width:112px;border-width:0px;" /></div>
 
                     <p style="margin-top: 6px; width: 100%; float: left;">
 
                         Category: <a href="MyProjects.aspx?categoryid=8" id="ctl00_ContentPlaceHolder1_lnkCat">
 
-                            <span id="ctl00_ContentPlaceHolder1_Proj_Category">Crossland High</span></a></p>
+                            <span id="ctl00_ContentPlaceHolder1_Proj_Category">${result.school}</span></a></p>
 
                     <p style="margin-top: 3px; width: 100%; float: left;">
 
                         Location: <a href="MyProjects.aspx?Loc=" id="ctl00_ContentPlaceHolder1_LnkLoc">
 
-                            <span id="ctl00_ContentPlaceHolder1_Location"></span></a></p>
+                            <span id="ctl00_ContentPlaceHolder1_Location">${result.city}</span></a></p>
 
                 </div>
 
@@ -97,7 +96,7 @@
 
                                     <div class="VideoImage">
 
-                                        <div id="ctl00_ContentPlaceHolder1_Media_File1"><iframe width='665' height='450' src='http://www.youtube.com/embed/EUjqqSzBWrg' frameborder='0' allowfullscreen></iframe></div>
+                                        <div id="ctl00_ContentPlaceHolder1_Media_File1"><iframe   width='665' height='450' src='http://www.youtube.com/embed/EUjqqSzBWrg?&amp;wmode=transparent' frameborder='0' allowfullscreen></iframe></div>
 
                                     </div>
 
@@ -127,13 +126,13 @@
 
                                         <div class="ShareData">
 
-                                            <span class='st_tumblr_hcount' displayText='Tumblr'></span>
+                                            <span class='st_tumblr_hcount' displayText='Tumblr'>${result.tumblr}</span>
 
                                         </div>
 
                                         <div class="ShareData">
 
-                                           <span class='st_email_hcount' displayText='Email'></span>
+                                           <span class='st_email_hcount' displayText='Email'>${result.email}</span>
 
                                         </div>
 
@@ -263,7 +262,7 @@
 
                                         <p>
 
-                                            <span id="ctl00_ContentPlaceHolder1_lblGraduationDate">January 2018</span>
+                                            <span id="ctl00_ContentPlaceHolder1_lblGraduationDate"></span>
 
                                         </p>
 
@@ -295,13 +294,13 @@
 
                                                 I will say thank you to everyone by spending time helping: <strong class="ProjectColor">
 
-                                                    <span id="ctl00_ContentPlaceHolder1_lblNonprofit">DKMS * Delete Blood Cancer America * Oxon Hills Food Pantry</span></strong></p>
+                                                    <span id="ctl00_ContentPlaceHolder1_lblNonprofit">${result.nonprofit}</span></strong></p>
 
                                             <p class="GPdive" style="margin-top: 9px;">
 
                                                 Guess who also helps support my cause: <strong class="ProjectColor">
 
-                                                    <span id="ctl00_ContentPlaceHolder1_lblcelebrity">rihanna , gabrielle union ,tyrese gibson,Lala Anthony </span></strong></p>
+                                                    <span id="ctl00_ContentPlaceHolder1_lblcelebrity">${result.celebrity}</span></strong></p>
 
                                             
 
@@ -309,13 +308,13 @@
 
                                                 Help this campaign reach its goal! <strong class="ProjectColor">
 
-                                                    <span id="ctl00_ContentPlaceHolder1_proname1">AspiringSuccess</span></strong></p>
+                                                    <span id="ctl00_ContentPlaceHolder1_proname1">${result.title}</span></strong></p>
 
                                         </div>
 
                                         <div class="ServicesProjectPrffile">
 
-                                            <img id="ctl00_ContentPlaceHolder1_imgUser" src="ProfileUploads/rihanna-dkms.jpg" style="height:188px;width:150px;border-width:0px;" /></div>
+                                            <img id="ctl00_ContentPlaceHolder1_imgUser" src=${result.picURL2} style="height:188px;width:150px;border-width:0px;" /></div>
 
                                     </div>
 

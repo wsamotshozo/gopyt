@@ -1,0 +1,59 @@
+       #{extends 'main.html'/} 
+    <div style="height: 35px;">
+        &nbsp;</div>
+    <div id="mainbox">
+        <div style="border: 3px solid #c1c1c1; margin-top: 32px; width: 655px; margin-left: 150px;">
+        </div>
+        <div id="MTabbedPanels1" class="MTabbedPanels">
+            <ul id="ctl00_ContentPlaceHolder1_ulTabs" class="MTabbedPanelsTabGroup projectabbg"><li class='MTabbedPanelsTab MTabbedPanelsTabVisited' id='tabBasicDetails' tabindex='0' runat='server'><a href='#'><span>Basic Details</span></a></li><li class='MTabbedPanelsTab MTabbedPanelsTabVisited' id='tabGetStarted' tabindex='1' runat='server'><a href='#'><span>GetStarted</span></a></li><li class='MTabbedPanelsTab' id='tabAddMedia' tabindex='0' runat='server'><a href='#'><span>Add Media </span></a></li><li class='MTabbedPanelsTab' id='tabAboutYou' runat='server' tabindex='0'><a href='#'><span>About You </span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabDescribe' runat='server'><a href='#'><span>Describe</span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabExtras' runat='server'><a href='#'><span>Extras</span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabConfirm' runat='server'><a href='#'><span>Confirm </span></a></li></ul>
+            <div class="MTabbedPanelsContentGroup">
+                <!----------------------content tab 2-------------------->
+		<form action="@{Application.aboutYou()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcGetStarted" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Get Started</div>
+                    <div class="popfullcon" style="margin-left:185px;">
+                        <div>
+                            <p>
+                                <label for="name">
+                                    Choose Your Current School</label>
+                                <select name="school" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlSchoolNames\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlSchoolNames" style="width: 200px; height: 32px; margin-left: 15px; margin-top: 0px;
+                                    padding: 5px;">
+
+	<option value="4">John F Kennedy HS</option>
+
+	<option value="5">Virginia State Beta</option>
+
+	<option value="8">Crossland High</option>
+
+	<option value="9">Michael Test Students </option>
+
+	<option value="10">Lindsey Test Group</option>
+
+	<option selected="selected" value="11">Test School</option>
+
+
+
+</select>
+                            </p>
+                            <p>
+                                <label for="name">
+                                    How Much Do you Want To Raise?
+                                </label>                                  
+                              
+                                <input name="amount" type="text" value="1000" id="ctl00_ContentPlaceHolder1_txtAmountRaised" placeholder="Total the Goal to Raise (required)" style="font-style:italic;" />(required)
+                                <span id="ctl00_ContentPlaceHolder1_rfvAmountRaised" style="color:Red;visibility:hidden;">Enter the Amount to be Raised </span><br />
+                                     
+									 <span id="ctl00_ContentPlaceHolder1_revamountraised" style="color:Red;visibility:hidden;">Enter only Numeric values(no comma, no decimal, EX: $10,000 would be 10000)</span>
+                            </p><p>How much Do you want to raise? This should be your overall expected tuition costs.  If this amount is not yet determined, estimate the average costs associated with the schools you aspire to attend. This can be updated later. Enter only Numeric values(no comma, no decimal, EX: $10,000 would be 10000)</p>
+                            <div class="clear">
+<input name="id" type="text" value=${s.id}   style="font-style:italic;" />
+
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSchoolname" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSchoolname&quot;, &quot;&quot;, true, &quot;VGGetStarted&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSchoolname" class="button-neutral" style="background: #E40000; border-radius: 8px;
+                                    padding: 12px 12px 30px 12px;" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ </form>

@@ -1,0 +1,451 @@
+       #{extends 'main.html'/} 
+    <div style="height: 35px;">
+        &nbsp;</div>
+    <div id="mainbox">
+        <div style="border: 3px solid #c1c1c1; margin-top: 32px; width: 655px; margin-left: 150px;">
+        </div>
+        <div id="MTabbedPanels1" class="MTabbedPanels">
+            <ul id="ctl00_ContentPlaceHolder1_ulTabs" class="MTabbedPanelsTabGroup projectabbg"><li class='MTabbedPanelsTab MTabbedPanelsTabVisited' id='tabBasicDetails' tabindex='0' runat='server'><a href='#'><span>Basic Details</span></a></li><li class='MTabbedPanelsTab MTabbedPanelsTabVisited' id='tabGetStarted' tabindex='1' runat='server'><a href='#'><span>GetStarted</span></a></li><li class='MTabbedPanelsTab' id='tabAddMedia' tabindex='0' runat='server'><a href='#'><span>Add Media </span></a></li><li class='MTabbedPanelsTab' id='tabAboutYou' runat='server' tabindex='0'><a href='#'><span>About You </span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabDescribe' runat='server'><a href='#'><span>Describe</span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabExtras' runat='server'><a href='#'><span>Extras</span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabConfirm' runat='server'><a href='#'><span>Confirm </span></a></li></ul>
+            <div class="MTabbedPanelsContentGroup">
+                <!----------------------content tab 1-------------------->  
+
+             <form action="@{Application.register1()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcBasicDetails" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Basic Details</div>
+                    <div class="popleftcon">
+                        <p>
+                            
+                            <span id="ctl00_ContentPlaceHolder1_lblFirstName" class="name">First Name</span>
+                            <input name="ctl00$ContentPlaceHolder1$txtFirstName" type="text" value=${s.firstName} id="ctl00_ContentPlaceHolder1_txtFirstName" disabled="disabled" placeholder="Enter FirstName" style="font-style:italic;" />(required)
+                            <input name="id" type="text" value=${s.id}   style="font-style:italic;" />
+                            <input name="tab" type="text" value="1"   style="font-style:italic; display:none" />
+
+                            </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblLastName" class="name">Last Name</span>
+                            <input name="ctl00$ContentPlaceHolder1$txtLastName" type="text" value=${s.lastName} id="ctl00_ContentPlaceHolder1_txtLastName" disabled="disabled" placeholder="Enter LastName" style="font-style:italic;" />(required)
+                            
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblLocation" class="name">City</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="city" type="text" id="ctl00_ContentPlaceHolder1_txtCountry" placeholder="Enter City" style="font-style:italic;" />(required)
+                            <br /><span id="ctl00_ContentPlaceHolder1_rfvCountry" style="color:Red;visibility:hidden;">Enter Your City</span>
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblPostalCode" class="name">Zip Code</span>
+                            <input name="zipcode" type="text" id="ctl00_ContentPlaceHolder1_txtPostalCode" placeholder="Enter Your Zip Code" style="font-style:italic;" />(required)
+                            <span id="ctl00_ContentPlaceHolder1_revPostalCode" style="color:Red;visibility:hidden;">Enter Your Zip Code, Numbers Only</span>
+                       </p>
+                    </div>
+                    <div class="poprightcon">
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblFacebookProfile" class="name">Facebook Profile</span>
+                            <input name="facebook" type="text" id="ctl00_ContentPlaceHolder1_txtFacebookProfile" placeholder="http://www.facebook.com/" style="font-style:italic;" />
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblTwitterProfile" class="name">Twitter Profile</span>
+                            <input name="twitter" type="text" id="ctl00_ContentPlaceHolder1_txtTwitterProfile" placeholder="http://www.twitter.com/" style="font-style:italic;" />
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblTumblrProfile" class="name">Tumblr Profile</span>
+                            <input name="tumblr" type="text" id="ctl00_ContentPlaceHolder1_txtTumblrProfile" placeholder="www.tumblr.com/" style="font-style:italic;" />
+                        </p>
+                        <div class="clear">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnBasicDetails" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnBasicDetails&quot;, &quot;&quot;, true, &quot;VGBasicDetails&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnBasicDetails" class="button-neutral" style="background: #E40000; border-radius: 8px;
+                                padding: 12px 12px 30px 12px;" />
+                            
+                        </div>
+                    </div>
+                </div>
+		</form>
+                <!----------------------content-------------------->
+                <!----------------------content tab 2-------------------->
+             <form action="@{Application.register2()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcGetStarted" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Get Started</div>
+                            <input name="tab" type="text" value="2"   style="font-style:italic; display:none" />
+                    <div class="popfullcon" style="margin-left:185px;">
+                        <div>
+                            <p>
+                                <label for="name">
+                                    Choose Your Current School</label>
+                                <select name="school" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlSchoolNames\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlSchoolNames" style="width: 200px; height: 32px; margin-left: 15px; margin-top: 0px;
+                                    padding: 5px;">
+					#{if query}
+						#{list items:query, as:'school'}
+							<option value=${school.title}>${school.title}</option>
+						#{/list}
+					#{/if}
+
+
+
+</select>
+                            </p>
+                            <p>
+                                <label for="name">
+                                    How Much Do you Want To Raise?
+                                </label>                                  
+                              
+                                <input name="amount" type="text" value="10" id="ctl00_ContentPlaceHolder1_txtAmountRaised" placeholder="Total the Goal to Raise (required)" style="font-style:italic;" />(required)
+                                <span id="ctl00_ContentPlaceHolder1_rfvAmountRaised" style="color:Red;visibility:hidden;">Enter the Amount to be Raised </span><br />
+                                     
+									 <span id="ctl00_ContentPlaceHolder1_revamountraised" style="color:Red;visibility:hidden;">Enter only Numeric values(no comma, no decimal, EX: $10,000 would be 10000)</span>
+                            </p><p>How much Do you want to raise? This should be your overall expected tuition costs.  If this amount is not yet determined, estimate the average costs associated with the schools you aspire to attend. This can be updated later. Enter only Numeric values(no comma, no decimal, EX: $10,000 would be 10000)</p>
+                            <div class="clear">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSchoolname" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSchoolname&quot;, &quot;&quot;, true, &quot;VGGetStarted&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSchoolname" class="button-neutral" style="background: #E40000; border-radius: 8px;
+                                    padding: 12px 12px 30px 12px;" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		</form>
+                <!----------------------content tab 3-------------------->
+             <form action="@{Application.register3()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcAddMedia" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Add Media</div>
+                            <input name="tab" type="text" value="3"   style="font-style:italic; display:none" />
+                    <div class="popleftcon">
+                        <div>
+                            <label for="name">
+                                <strong>Photo of the Organization You Support</strong></label></div>
+                        <img id="ctl00_ContentPlaceHolder1_ProfileImage" src="" style="height:95px;width:95px;border-width:0px;" />
+                        <input type="file" name="ctl00$ContentPlaceHolder1$fulProfileImage" id="ctl00_ContentPlaceHolder1_fulProfileImage" />
+                        <span id="ctl00_ContentPlaceHolder1_rfvProfileImage" style="color:Red;visibility:hidden;">Select A file</span>
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnProfileImage" value="Upload" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnProfileImage&quot;, &quot;&quot;, true, &quot;VGAddMedia1&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnProfileImage" style="background: #5DBCD2; border-radius: 8px;
+                            padding: 6px 12px 21px 12px;" />
+                        
+                        <p>This pic will represent your chosen non-profit, and will display on your campaign page in the description area. INSTAGRAM photos and collages makes the best cover photos for your profile. Make sure you crop it to a square, not a rectangle. Size should be 200 pixels X 200 pixels. The average cell phone pic is over 1000 pixels, so shrink it down!</p>
+                    </div>
+                    <div class="poprightcon" align="center">
+                        <div>
+                            <label for="name">
+                                <strong>Your Cover Photo</strong></label>
+                        </div>
+                        <img id="ctl00_ContentPlaceHolder1_imgCampaignphoto" src="" style="height:95px;width:95px;border-width:0px;" />
+                        <input type="file" name="ctl00$ContentPlaceHolder1$fulCampaignPhoto" id="ctl00_ContentPlaceHolder1_fulCampaignPhoto" />
+                        <span id="ctl00_ContentPlaceHolder1_rfvCampaignPhoto" style="color:Red;visibility:hidden;">Select A file</span>
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnCampaignPhoto" value="Upload" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnCampaignPhoto&quot;, &quot;&quot;, true, &quot;VGAddMedia2&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnCampaignPhoto" style="background: #5DBCD2; border-radius: 8px;
+                            padding: 6px 12px 21px 12px;" />
+                        <p>This is a thumbnail pic that displays on your campaign preview card on the homepage. It can be a fun, professional, or theme focused pic to represent your campaign. INSTAGRAM photos and collages makes the best cover photos for your profile. Make sure you crop it to a square, not a rectangle. Size should be 200 pixels X 200 pixels. The average cell phone pic is over 1000 pixels, so shrink it down!</p>
+                        <div style="height: 25px;">
+                            &nbsp;</div>
+                        <div class="clear">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnUpload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnUpload" class="button-neutral" style="background: #E40000; border-radius: 8px; padding: 12px 12px 30px 12px;" />
+                            
+                        </div>
+                    </div>
+                </div>
+		</form>
+                <!----------------------content tab 4-------------------->
+             <form action="@{Application.register4()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcAboutYou" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        About You</div>
+                            <input name="tab" type="text" value="4"   style="font-style:italic; display:none" />
+                    <div class="popfullcon" style="margin-left:175px;">
+                        <div>
+                            <p>
+                                <label for="tagname">
+                                    Here are some of my hobbies and interests:</label>
+                                
+                                <textarea name="hobbies" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txthobbies" placeholder="Enter Your Hobbies (required)" style="font-style:italic;"></textarea>
+                                <span id="ctl00_ContentPlaceHolder1_rfvHobbies" style="color:Red;visibility:hidden;">Enter hobbies and interests</span>
+                            </p>
+                            <p>
+                                <label for="tagname">
+                                    My academic interests include:</label>
+                                <textarea name="interests" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtAcademicInterests" placeholder="Enter Your Academic Interests (required)" style="font-style:italic;"></textarea>
+                                <span id="ctl00_ContentPlaceHolder1_rfvAcademicInterests" style="color:Red;visibility:hidden;">Enter Academic Interests</span>
+                            </p>
+                            <p>
+                                <label for="tagname">
+                                    Colleges I am interested in:</label>
+                                <textarea name="colleges" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtCollegeInterest" placeholder="Enter the College You're interested in (required)" style="font-style:italic;"></textarea>
+                                <span id="ctl00_ContentPlaceHolder1_rfvCollegeInterest" style="color:Red;visibility:hidden;">Enter the College You're interested in</span>
+                            </p>
+                            <p>
+                                <label for="tagname">
+                                    My expected graduation date:</label>
+                                <input name="graduation" type="text" id="ctl00_ContentPlaceHolder1_txtgraduationdate" placeholder="Enter Your Graduation Date (required)" style="font-style:italic;" />
+                                <img id="ctl00_ContentPlaceHolder1_Image1" src="Images/calendar.gif" style="border-width:0px;" />
+                                <span id="ctl00_ContentPlaceHolder1_rfvdate" style="color:Red;visibility:hidden;">Select graduation date</span>
+                              
+                                
+                            </p>
+                            <p>
+                                <label for="tagname">
+                                    My Favorite Celebrity Role Model</label>
+                                <textarea name="celebrity" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtFavCelebrity" placeholder="Enter Your Favourite Celebrity (required)" style="font-style:italic;"></textarea>
+                                My favorite celebrity role model - Choose someone here that you can contact to help you support your profile.  For the test you can choose any celebrity.
+								<br /><br />
+                                <b>Search for a Celebrity:</b><br />
+                                <br />
+                                <a href="http://coolspotters.com/celebrities" onclick="return popitup('http://coolspotters.com/celebrities')"
+                                    style="background: #ffcc32; border-radius: 8px; padding: 8px 12px;">Coolspotter</a>
+                                <span id="ctl00_ContentPlaceHolder1_rfvFavCelebrity" style="color:Red;visibility:hidden;">Enter Your Favorite Celebrity </span>
+                            </p>
+                            <p>
+                                <label for="tagname">
+                                    My Chosen Nonprofit Social Connections
+                                </label>
+                                <textarea name="nonprofit" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtNonProfit" placeholder="Enter Your Chosen NonProfit (required)" style="font-style:italic;"></textarea>
+                        My chosen Nonprofit - The Beta test group can select from the BOY AND GIRLS CLUB OF AMERICA and THE FEEDING AMERICA  organizations to support.  This is for the Beta test only
+<br /><br />
+                                <b>Search for a charity:</b><br />
+                                <br />
+                                <a href="http://www.looktothestars.org/" onclick="return popitup('http://www.looktothestars.org/')"
+                                    style="background: #ffcc32; border-radius: 8px; padding: 8px 12px;">Looktostars</a>
+                                
+                                <a href="http://www.charitynavigator.org/index.cfm?bay=topten.detail&listid=22" onclick="return popitup('http://www.charitynavigator.org/index.cfm?bay=topten.detail&listid=22')"
+                                    style="background: #ffcc32; border-radius: 8px; padding: 8px 12px;">CharityNavigator</a>
+                                <span id="ctl00_ContentPlaceHolder1_rfvNonProfit" style="color:Red;visibility:hidden;">Enter Non Profit</span>
+                            </p>
+                            <div class="clear">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnAboutYou" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnAboutYou&quot;, &quot;&quot;, true, &quot;VGAboutYou&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnAboutYou" class="button-neutral" style="background: #E40000; border-radius: 8px;
+                                    padding: 12px 12px 30px 12px;" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		</form>
+                <!----------------------content tab 5-------------------->
+             <form action="@{Application.register5()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcDescribe" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Describe</div>
+                            <input name="tab" type="text" value="5"   style="font-style:italic; display:none" />
+                    <div class="popfullcon" style="margin-left:165px;">
+                     
+                            <p>
+                                <label for="tagname"> Title</label>
+                                <input name="title" type="text" maxlength="15" id="ctl00_ContentPlaceHolder1_txtTitle" placeholder="Enter Your Title" style="font-style:italic;" />(required)
+                                <span id="ctl00_ContentPlaceHolder1_rfvTitle" style="color:Red;visibility:hidden;">Enter a Title For Your Campaign 80 Characters MAX</span>
+                            </p>
+                            <p>
+                                <label for="tagname"> Teaser (required)</label>
+                                <textarea name="teaser" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtTeaser" placeholder="Give us a teaser. This could be a quote, an interesting fact, a lyric, a poem. Something that will catch our attention. This will show up at the top of your campaign and on your campaign link. Examples - 'I'm going to Harvard' or 'My VA TECH Journey' 160 CHaracters (required)" style="font-style:italic;height:85px; font-weight:normal;"></textarea>
+                                <span id="ctl00_ContentPlaceHolder1_rfvTeaser" style="color:Red;visibility:hidden;">Enter a Teaser For Your Campaign 160 Characters MAX</span>
+                            </p>
+                            
+                            
+                               <p>
+                       			 <label for="tagname"> Description (required)</label>
+                                 
+                               </p>
+                               
+                             <div style="height:295px;"></div>
+								
+                                <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+
+	
+                                    <div id="ctl00_ContentPlaceHolder1_Editor" style="background-color:White;height:400px;width:700px;">
+
+		<div id="ctl00_ContentPlaceHolder1_Editor_ctl00" style="position:relative;left:0px;top:0px;height:0px;width:0px;z-index:1;"><div id="ctl00_ContentPlaceHolder1_Editor_DialogBox" style="left:50px;width:300px;z-index:2;height:200px;position:absolute;top:75px;display:none;color:Black;border:solid 1px Black;background-color:GhostWhite;">
+
+			<div id="ctl00_ContentPlaceHolder1_Editor_DialogHeading" style="left:0px;text-align:center;cursor:move;font-size:12pt;background-color:LightSteelBlue;height:30px;position:relative;top:0px;color:Black;line-height:29px;border-bottom:solid 1px Black;font-weight:bold;font-family:Verdana;" onmousedown="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.Drag(this.parentNode, event); }"></div><iframe id="ctl00_ContentPlaceHolder1_Editor_DialogFrame" style="display:block;background-color:GhostWhite;" width="100%" frameborder="0"></iframe><div id="ctl00_ContentPlaceHolder1_Editor_DialogButtons" style="height:30px;text-align:center;border-top:solid 1px Black;background-color:LightSteelBlue;"><input type="submit" name="ctl00$ContentPlaceHolder1$Editor$DialogOKButton" value="OK" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.OnDialogOK(); }; return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$Editor$DialogOKButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_Editor_DialogOKButton" style="width:75px;font-family:Verdana;font-size:8pt;margin-top:5px;" /><input type="submit" name="ctl00$ContentPlaceHolder1$Editor$DialogCancelButton" value="Cancel" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.CloseDialogBox(); }; return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$Editor$DialogCancelButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_Editor_DialogCancelButton" style="width:75px;font-family:Verdana;font-size:8pt;margin-top:5px;" /></div>
+
+		</div></div><div style="background-color:#7F9DB9;"><div id="ctl00_ContentPlaceHolder1_Editor_ctl02" style="width:700px;height:25px;background-color:#7F9DB9;position:relative;left:0px;top:0px;padding-top:3px;display:block;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" height="1" width="1" alt="" style="position:absolute;left:0px;top:0px;margin:0px;padding:0px;background-color:White;font-size:0px;" /><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" height="1" width="1" alt="" style="position:absolute;right:0px;top:0px;margin:0px;padding:0px;background-color:White;font-size:0px;" /><div style="display:inline;height:25px;background-color:#7F9DB9;margin-left:3px;float:left;"><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=s6vkp8IeaC5ZxuXLdEjZSZkQlKdpTqTJDZnIcWlXa4igRHd74hP2e9ANWqW55XiQbbfrAfLDDrHCff0JVcfQ6tGydreEtbCbY35KV7b72nwiOwkwdWD1km678ovzu7GkyibYWWYTFNTbuy8V9lbwEcg-VbM1_yBf936PZqv2E5zdLc1K0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div><div style="float:left;display:inline;height:25px;background-image:url(/WebResource.axd?d=IS3khdv72ogeezW07kbDcL0E2NTgx8eqA4iStjPhSf699BiVuWhJDymlGxw2KqLBtdOEtWpFrBHSMQKdnXECJ_HmaBkdEq47HnsYAZl2hvarX4ITVMRXtu-H5houBsxDViuMlnYi5d4lktb81FLRJY0wrNvCRQrAW0Kg9V--2e3p8w6C0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:repeat-x;"><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div><select name="ctl00$ContentPlaceHolder1$Editor$ctl10" id="ctl00_ContentPlaceHolder1_Editor_ctl10" style="font-family:Verdana;font-size:8pt;width:100px;vertical-align:middle;margin-right:2px;display:inline;" onchange="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoFormat(this.options[this.selectedIndex].value); }">
+
+			<option value="p">Normal</option>
+
+			<option value="p">Paragraph</option>
+
+			<option value="h1">Heading 1</option>
+
+			<option value="h2">Heading 2</option>
+
+			<option value="h3">Heading 3</option>
+
+			<option value="h4">Heading 4</option>
+
+			<option value="h5">Heading 5</option>
+
+			<option value="h6">Heading 6</option>
+
+			<option value="address">Address</option>
+
+			<option value="pre">Formatted</option>
+
+		</select><select name="ctl00$ContentPlaceHolder1$Editor$ctl11" id="ctl00_ContentPlaceHolder1_Editor_ctl11" style="font-family:Verdana;font-size:8pt;width:100px;vertical-align:middle;margin-right:2px;display:inline;" onchange="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoFont(this.options[this.selectedIndex].value); }">
+
+			<option value="">Font</option>
+
+			<option value="Arial">Arial</option>
+
+			<option value="Courier New">Courier New</option>
+
+			<option value="Garamond">Garamond</option>
+
+			<option value="Sans Serif">Sans Serif</option>
+
+			<option value="Tahoma">Tahoma</option>
+
+			<option value="Times New Roman">Times</option>
+
+			<option value="Verdana">Verdana</option>
+
+			<option value="Wingdings">Wingdings</option>
+
+		</select><select name="ctl00$ContentPlaceHolder1$Editor$ctl12" id="ctl00_ContentPlaceHolder1_Editor_ctl12" style="font-family:Verdana;font-size:8pt;width:100px;vertical-align:middle;margin-right:2px;display:inline;" onchange="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoSize(this.options[this.selectedIndex].value); }">
+
+			<option value="">Size</option>
+
+			<option value="1">Very Small</option>
+
+			<option value="2">Smaller</option>
+
+			<option value="3">Small</option>
+
+			<option value="4">Medium</option>
+
+			<option value="5">Large</option>
+
+			<option value="6">Larger</option>
+
+			<option value="7">Very Large</option>
+
+		</select><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div></div><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=a2wZyI2sSFJSTj3JqIiT2q61eyD-FEkYIqlo_eH2cmQ_bnYPc_3K04Wg2NuKcST8jMsv35IJOySC8b8sfHQnibTg10JAkTJkTTlboYP9Bn6KtxVLYI_qfsKOqJohIWv-hUYHe2QhHgo4S5_jhSwTJDpSLfEq9YkiVWE5qUkKNm9xq_Jw0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div></div><div style="display:inline;height:25px;background-color:#7F9DB9;margin-left:3px;float:left;"><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=s6vkp8IeaC5ZxuXLdEjZSZkQlKdpTqTJDZnIcWlXa4igRHd74hP2e9ANWqW55XiQbbfrAfLDDrHCff0JVcfQ6tGydreEtbCbY35KV7b72nwiOwkwdWD1km678ovzu7GkyibYWWYTFNTbuy8V9lbwEcg-VbM1_yBf936PZqv2E5zdLc1K0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div><div style="float:left;display:inline;height:25px;background-image:url(/WebResource.axd?d=IS3khdv72ogeezW07kbDcL0E2NTgx8eqA4iStjPhSf699BiVuWhJDymlGxw2KqLBtdOEtWpFrBHSMQKdnXECJ_HmaBkdEq47HnsYAZl2hvarX4ITVMRXtu-H5houBsxDViuMlnYi5d4lktb81FLRJY0wrNvCRQrAW0Kg9V--2e3p8w6C0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:repeat-x;"><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl21" style="display:inline;"><img src="/WebResource.axd?d=jY6AcJSu5oH68OVvEL-nsQVBC1FnRIDUzZBvKC93M3qMqDpihaPCW3Ey9RdIWICIwKLI1xNnlRhqXbjt8c5azC4YYqAH_MyWX_yeqtBjqXbLZJuL523GDSG8HbUV3UoKS5OdhYFDpIdItECUrFzGcpAPaus1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl22" alt="Text Color" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Text Color" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DialogBox('ForeColor'); }" /><img src="/WebResource.axd?d=LhsRRSfZxRj4iWX5o1pmfE2JJCQYrWEvvdddod_vShujFSAvw8lhAtg1pRCSfPTVZHzrzItNGWUYhSdKhwozI5XJucGjLZvz-4TO_F4iz8fokpuWh2iuE3q5bh2LG_us0V_eES9z248TY8W142mvnj8U6aE1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl23" alt="Background Color" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Background Color" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DialogBox('BackColor'); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div></div><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=a2wZyI2sSFJSTj3JqIiT2q61eyD-FEkYIqlo_eH2cmQ_bnYPc_3K04Wg2NuKcST8jMsv35IJOySC8b8sfHQnibTg10JAkTJkTTlboYP9Bn6KtxVLYI_qfsKOqJohIWv-hUYHe2QhHgo4S5_jhSwTJDpSLfEq9YkiVWE5qUkKNm9xq_Jw0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div></div>
+
+</div><div id="ctl00_ContentPlaceHolder1_Editor_ctl27" style="width:700px;height:25px;background-color:#7F9DB9;margin-top:1px;padding-bottom:0px;display:block;"><div style="display:inline;height:25px;background-color:#7F9DB9;margin-left:3px;float:left;"><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=s6vkp8IeaC5ZxuXLdEjZSZkQlKdpTqTJDZnIcWlXa4igRHd74hP2e9ANWqW55XiQbbfrAfLDDrHCff0JVcfQ6tGydreEtbCbY35KV7b72nwiOwkwdWD1km678ovzu7GkyibYWWYTFNTbuy8V9lbwEcg-VbM1_yBf936PZqv2E5zdLc1K0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div><div style="float:left;display:inline;height:25px;background-image:url(/WebResource.axd?d=IS3khdv72ogeezW07kbDcL0E2NTgx8eqA4iStjPhSf699BiVuWhJDymlGxw2KqLBtdOEtWpFrBHSMQKdnXECJ_HmaBkdEq47HnsYAZl2hvarX4ITVMRXtu-H5houBsxDViuMlnYi5d4lktb81FLRJY0wrNvCRQrAW0Kg9V--2e3p8w6C0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:repeat-x;"><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl33" style="display:inline;"><img src="/WebResource.axd?d=FbC0APldvDQCeXteacmJgboEDcNw4eOzSQzM6780DcBoSn7q3cXizIOEm1gVKTkLg9F__hpf5FBEnDjm1Lwel_CG0xtTqsJCcJw8LJarGNobSkXJiHVfj9T4UjpNUYqo8_BOfG0iAD259EEttGvRK71T_Mo1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl34" alt="Bold" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Bold" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoBold(); }" /><img src="/WebResource.axd?d=GcEvyvEnwdQ5yPSyfUil64f0bh2q13HKBF-AAZdSHmrf_njmTutXPm4GXz4jfYlKwjsjQZwIZG2BTMZ9M3eHqH8vhORU9_Iu_mwi248cjGAoOLae_N_YpZ-dNxC7VvacZYIjgKhEeTCkTcBXebl3FFZfmMw1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl35" alt="Italic" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Italic" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoItalic(); }" /><img src="/WebResource.axd?d=pqAWYEgSrkwfeKLM_5C2rBvkz5br3JcBU54bRarsAJLYRjKEv5qNTvv6nlrkXaHju_pae2UGGpBc-3434AaVCW-H_fKV2n0_NA6cyUGkM9pYZDqC8q28TzwvV2qwpZgO_aPuObOoCEbm0sOFTGZ6VGpG-qU1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl36" alt="Underline" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Underline" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoUnderline(); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div></div><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=a2wZyI2sSFJSTj3JqIiT2q61eyD-FEkYIqlo_eH2cmQ_bnYPc_3K04Wg2NuKcST8jMsv35IJOySC8b8sfHQnibTg10JAkTJkTTlboYP9Bn6KtxVLYI_qfsKOqJohIWv-hUYHe2QhHgo4S5_jhSwTJDpSLfEq9YkiVWE5qUkKNm9xq_Jw0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div></div><div style="display:inline;height:25px;background-color:#7F9DB9;margin-left:3px;float:left;"><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=s6vkp8IeaC5ZxuXLdEjZSZkQlKdpTqTJDZnIcWlXa4igRHd74hP2e9ANWqW55XiQbbfrAfLDDrHCff0JVcfQ6tGydreEtbCbY35KV7b72nwiOwkwdWD1km678ovzu7GkyibYWWYTFNTbuy8V9lbwEcg-VbM1_yBf936PZqv2E5zdLc1K0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div><div style="float:left;display:inline;height:25px;background-image:url(/WebResource.axd?d=IS3khdv72ogeezW07kbDcL0E2NTgx8eqA4iStjPhSf699BiVuWhJDymlGxw2KqLBtdOEtWpFrBHSMQKdnXECJ_HmaBkdEq47HnsYAZl2hvarX4ITVMRXtu-H5houBsxDViuMlnYi5d4lktb81FLRJY0wrNvCRQrAW0Kg9V--2e3p8w6C0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:repeat-x;"><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl45" style="display:inline;"><img src="/WebResource.axd?d=AURhne-YKm6zx2axXfgcFYbai1q7hdzSbzqxdrc2tHShlTQDGbytAjWBwSwRFJEVwZz9ttPFGkmDjs9Iy337ApGASziAVqIZDezVU80jhvSDtfAWO2f-xWUKOjDm5fh_aJqdDiOT1q3b2-asm8o6FbMWw5c1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl46" alt="Left" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Left" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoLeft(); }" /><img src="/WebResource.axd?d=vld8B-Es4EI0U1796QUUbDWq8w4hqHnb7-jKs-S4FkPkJsH395zeenoSRqp0PO6AjzOGxxBVLvQgauqvPyTkSqE7HXT710n7FiNGcQkxNCf64ALziBEwr5uZfUsZ9rJWTY-47a-XcL2rWXnyIJUAsAxvSl41&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl47" alt="Center" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Center" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoCenter(); }" /><img src="/WebResource.axd?d=EOEyKbeonFr5IqPx1cD3qCugoo5C88Y2Md1_l66uPuaBpQnuRN6o3uRBeJXFNmiLStVlUTOBvPriKTQhztgoblYwC16oFDhZ9cs8bDJsCw7a41xj4yKcMHNmMWXyUs_C5lEw3dSBYc5b2lIJ_WyAAlh0GYQ1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl48" alt="Right" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Right" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoRight(); }" /><img src="/WebResource.axd?d=SW7yre9aldx59YNyT9qytwfd9jVqN69WhapO1Nx3TgSh-EHRC3uYex8OJgnFpXxx2IyRiBo-HRfEjBzPlsOpWRYSc6Cd-cHqm4olpIGdlVzpAs2urkz9JI2xyHapxqubvE8Ln-3NoICdPlFTc-T-6aCMHl01&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl49" alt="Justify" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Justify" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoJustify(); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=I7-2WqwEcPmgHIEWH2uG-zFbllp8FV4mLQ91Nmy_2fYGTSx9BfUX7YuMn5cLULzQ78jXmN4ToMuSd34b5hUDJpSPABKREi7XQzltUa9U6OOLQQVq7_awISy7AgkyvG7cfTo1Wx5cozCdrZMsI9qQKEAri_NHcE-gf7r417vB6jmHn_Hd0&amp;t=634805590140000000" alt="" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl52" style="display:inline;"><img src="/WebResource.axd?d=I8Bku-Zkjh40CulJW7YYuOvhDJHxSM5ONuhHd0kfykekAU618halHb-OZ5s36qBvWt4ZtZbsiQpEe_xgHwigCrnibOW0UY9t-2EYzuEk1kZ4BSG0wij_fOCXrjDCpCrLvQJducloMDzBt0-eM_c8f87mwSQ1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl53" alt="Ordered List" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Ordered List" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoOrderedList(); }" /><img src="/WebResource.axd?d=oY3rX1_c59JXRABKeDtIjXbKpw2YtY_Y-iD_4o1Iy5jlKoHVA_coZD6smregSBJvGGQVNibV2_tqGFHchX0FaUbaikGl29zQckMxPI_Uud-lH80gTrQUSoGuzbdr13b4lAUCSHkqLcHHkDDWPRdJ0pQPLI01&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl54" alt="Bulleted List" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Bulleted List" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoBulletedList(); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=I7-2WqwEcPmgHIEWH2uG-zFbllp8FV4mLQ91Nmy_2fYGTSx9BfUX7YuMn5cLULzQ78jXmN4ToMuSd34b5hUDJpSPABKREi7XQzltUa9U6OOLQQVq7_awISy7AgkyvG7cfTo1Wx5cozCdrZMsI9qQKEAri_NHcE-gf7r417vB6jmHn_Hd0&amp;t=634805590140000000" alt="" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl57" style="display:inline;"><img src="/WebResource.axd?d=T9MqoIYrArHyp7iYQhCq7GYFlrj2GhES9oIVEfqL7Rgcyr5AztbILanvgeOBdy8Ub6r3xSS0Cuv928O3nhb_diGY2PLikwwGVfdR4wsq6QQJE-mAQJa8SKBNA0TwgBpVJeD72nRpzr2j7qPsZJKc5jw1aOw1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl58" alt="Indent" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Indent" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoIndent(); }" /><img src="/WebResource.axd?d=dqLpVHCLCuCE2XPsyurvnza6wbA2X-MgGkwHS8SXzcPKvX7uXeAGfgepyZUjacQp5VGJURrYHaaXO4E098Hk-ef4qMERymTeyyvEieyCb76Q1vJV_cBm15RgtlsdtFEipo2h1k0oLchydBObIAGJEYfHML81&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl59" alt="Outdent" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Outdent" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoOutdent(); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=I7-2WqwEcPmgHIEWH2uG-zFbllp8FV4mLQ91Nmy_2fYGTSx9BfUX7YuMn5cLULzQ78jXmN4ToMuSd34b5hUDJpSPABKREi7XQzltUa9U6OOLQQVq7_awISy7AgkyvG7cfTo1Wx5cozCdrZMsI9qQKEAri_NHcE-gf7r417vB6jmHn_Hd0&amp;t=634805590140000000" alt="" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl62" style="display:inline;"><img src="/WebResource.axd?d=IawhXgd-NbayHZB1eYZHkJrjQpxL0c4xUcMz9LNbxCda0GlUoekeq1XfTImf3MpsGYCHXSltXUk_V_yYkULibcEDVB0WiId9nUl8K_vETLKZYgEw0LpCkrov1y3_Wi3sbRkp85t5sZOJK9jelojPvg1-7vk1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl63" alt="Horizontal Rule" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Horizontal Rule" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoRule(); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=I7-2WqwEcPmgHIEWH2uG-zFbllp8FV4mLQ91Nmy_2fYGTSx9BfUX7YuMn5cLULzQ78jXmN4ToMuSd34b5hUDJpSPABKREi7XQzltUa9U6OOLQQVq7_awISy7AgkyvG7cfTo1Wx5cozCdrZMsI9qQKEAri_NHcE-gf7r417vB6jmHn_Hd0&amp;t=634805590140000000" alt="" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl66" style="display:inline;"><img src="/WebResource.axd?d=jHoMY-juvJGg0BKX6kSDNFaCTo-U9e1zlHyg0bRib2kwk3dETvFhozTkUWkmVO_R_7g7LCyIO6Gn-VAFTrGGwfQ3DuUpx3L1lQG3LzWZ1ZQHC1fqXLDR0En_dRa_Mt3Z4KoKKD0poHVrYpxk-eBiC6JIdd01&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl67" alt="Subscript" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Subscript" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoSubscript(); }" /><img src="/WebResource.axd?d=gpnwFVJCfkpsNb3CsP5DgbqezqFMgtXpgITc3TFue8lMgYkVje7T0XAzVdX0Zq-d9S6za7plXg1ITAcF97bSwk7HdVGYghw1-p_gnddkhJ0ri8Igz2R-p_tZUeo-fcxJONpKi-ykbNElHc1Ma8s3iPQEKSY1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl68" alt="Superscript" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Superscript" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DoSuperscript(); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div></div><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=a2wZyI2sSFJSTj3JqIiT2q61eyD-FEkYIqlo_eH2cmQ_bnYPc_3K04Wg2NuKcST8jMsv35IJOySC8b8sfHQnibTg10JAkTJkTTlboYP9Bn6KtxVLYI_qfsKOqJohIWv-hUYHe2QhHgo4S5_jhSwTJDpSLfEq9YkiVWE5qUkKNm9xq_Jw0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div></div><div style="display:inline;height:25px;background-color:#7F9DB9;margin-left:3px;float:left;"><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=s6vkp8IeaC5ZxuXLdEjZSZkQlKdpTqTJDZnIcWlXa4igRHd74hP2e9ANWqW55XiQbbfrAfLDDrHCff0JVcfQ6tGydreEtbCbY35KV7b72nwiOwkwdWD1km678ovzu7GkyibYWWYTFNTbuy8V9lbwEcg-VbM1_yBf936PZqv2E5zdLc1K0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div><div style="float:left;display:inline;height:25px;background-image:url(/WebResource.axd?d=IS3khdv72ogeezW07kbDcL0E2NTgx8eqA4iStjPhSf699BiVuWhJDymlGxw2KqLBtdOEtWpFrBHSMQKdnXECJ_HmaBkdEq47HnsYAZl2hvarX4ITVMRXtu-H5houBsxDViuMlnYi5d4lktb81FLRJY0wrNvCRQrAW0Kg9V--2e3p8w6C0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:repeat-x;"><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div><div id="ctl00_ContentPlaceHolder1_Editor_ctl77" style="display:inline;"><img src="/WebResource.axd?d=DCzTWFcoiIKUs5oRMYPIsxkJXBt9m64q0qQenu3IICNGB8pwZtBAd0v-WKbOrAJ3N5RY5R3SrhJHYujKG5V-ip08sL-_JrXE2Ug0koHRKvQJefh6kLxQPM8W8k934dDn80A18OaStPiQI0-n1DvYKs7E1pU1&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl78" alt="Hyperlink" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Hyperlink" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DialogBox('Link'); }" /><img src="/WebResource.axd?d=I4wHP4Xy__kM7BFgh3iZPLtnzL1YRhKQvDdBkTjefg-U0pGgtv4cMMaMB8gSnTCvQ5W6Cldd9ck6r6L21EeRKttFNzV_dwzMqZ-zGDY4lfXqKIJ5gEsp8oLgm4kKyq-ZrYr0wQxp15SmtFA_kHwhal4Oah41&amp;t=634805590140000000" id="ctl00_ContentPlaceHolder1_Editor_ctl79" alt="Image" style="vertical-align:middle;border:1px solid;border-color:transparent;background-color:transparent;display:inline;" title="Image" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.MouseOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.DialogBox('Image'); }" /></div><div style="display:inline;"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" alt="" style="height:25px;width:3px;vertical-align:middle;" /></div></div><div style="float:left;display:inline;width:2px;height:25px;background-image:url(/WebResource.axd?d=a2wZyI2sSFJSTj3JqIiT2q61eyD-FEkYIqlo_eH2cmQ_bnYPc_3K04Wg2NuKcST8jMsv35IJOySC8b8sfHQnibTg10JAkTJkTTlboYP9Bn6KtxVLYI_qfsKOqJohIWv-hUYHe2QhHgo4S5_jhSwTJDpSLfEq9YkiVWE5qUkKNm9xq_Jw0&amp;amp;t=634805590140000000);background-position:left top;background-repeat:no-repeat;"></div></div>
+
+</div></div><div id="ctl00_ContentPlaceHolder1_Editor_contentText" style="width:696px;height:312px;border:solid 2px #7F9DB9;position:relative;left:0px;top:0px;display:none;"><iframe id="ctl00_ContentPlaceHolder1_Editor_htmlEditor" style="background-color:White;color:Black;position:absolute;left:0px;top:0px;border:solid 1px Gray;" width="694px" height="310px" frameborder="0" scrolling="no"></iframe></div><div id="ctl00_ContentPlaceHolder1_Editor_contentHtml" style="width:696px;height:312px;border:solid 2px #7F9DB9;position:relative;left:0px;top:0px;display:block;"><iframe id="ctl00_ContentPlaceHolder1_Editor_designEditor" style="background-color:White;color:Black;position:absolute;left:0px;top:0px;border:solid 1px Gray;" width="694px" height="310px" frameborder="0" scrolling="auto"></iframe></div><div style="font-family:Verdana;width:700px;height:30px;color:Black;background-color:White;position:relative;display:block;left:0px;top:0px;font-size:8pt;"><div id="ctl00_ContentPlaceHolder1_Editor_designTab" style="left:3px;width:80px;font-weight:bold;height:24px;color:White;background-color:#7F9DB9;position:absolute;top:0px;cursor:pointer;" title="Design Mode" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.TabOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.TabOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.SwitchMode(this, 'Design'); }"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" height="1" width="1" alt="" style="position:absolute;left:0px;bottom:0px;margin:0px;padding:0px;background-color:White;font-size:0px;" /><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" height="1" width="1" alt="" style="position:absolute;right:0px;bottom:0px;margin:0px;padding:0px;background-color:White;font-size:0px;" /><img src="/WebResource.axd?d=598Rve_rXr2XXDhuKepLiL4_Sg1WfYERJNPKYR1iuqGK3tkhikUx8wDUkHh00i9IhyNKfQ5BrTYdJRZIhDixNInurC3QedPwlFpsY8Eue9LLUOLwjOeCuGnNoU-N35Fncw6QqfS_rKK7UiLEwqKjl3FjulE1&amp;t=634805590140000000" alt="Design Mode" style="float:left;margin-left:2px;margin-top:1px;" /><span style="float:left;margin-left:0px;margin-top:4px;">Design</span></div><div id="ctl00_ContentPlaceHolder1_Editor_htmlTab" style="left:85px;width:80px;font-weight:normal;height:24px;color:Black;background-color:LightSteelBlue;position:absolute;top:0px;cursor:pointer;" title="Html Mode" onmouseover="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.TabOver(this); }" onmouseout="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.TabOut(this); }" onclick="var e = $find('ctl00_ContentPlaceHolder1_Editor'); if (e) { e.SwitchMode(this, 'Html'); }"><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" height="1" width="1" alt="" style="position:absolute;left:0px;bottom:0px;margin:0px;padding:0px;background-color:White;font-size:0px;" /><img src="/WebResource.axd?d=xb3AAEjJeHDywXIRTP9mJzhqwf81yqk8XL3i6NJo0tmAmcRFgKVww1gBkQJFK2vQvgsnbFkag21gQO6TTs1JJ8X0VrPuTcTZRwdvMdH3p_5nuwMNixSfEhBfPrGhLEpKg3iDv2CeFhB_0G1BoPc-Xsx_rLk1&amp;t=634805590140000000" height="1" width="1" alt="" style="position:absolute;right:0px;bottom:0px;margin:0px;padding:0px;background-color:White;font-size:0px;" /><img src="/WebResource.axd?d=K4iS848i91BxJmTd8CkDPpgKffWLKXIg0_zTx3zNWriVEtrmtEkiGU9vqN7fGfi4H9DnZcUMaFfazhBRNV9lh9i50C3-BJ3Y2DMz2OsuLKbN6qo_p5S86O3mdHOKJiC84cDqWFBTmIbxZ8jBjmwUiFqiyxk1&amp;t=634805590140000000" alt="Html Mode" style="float:left;margin-left:4px;margin-top:1px;" /><span style="float:left;margin-left:2px;margin-top:4px;">Html</span></div></div><div style="display:none;"><span id="ctl00_ContentPlaceHolder1_Editor_updatePanel"><input type="hidden" name="ctl00$ContentPlaceHolder1$Editor$htmlencodedText" id="ctl00_ContentPlaceHolder1_Editor_htmlencodedText" /><input type="hidden" name="ctl00$ContentPlaceHolder1$Editor$Modified" id="ctl00_ContentPlaceHolder1_Editor_Modified" value="false" /><input type="button" name="ctl00$ContentPlaceHolder1$Editor$SaveButton" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$Editor$SaveButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_ContentPlaceHolder1_Editor_SaveButton" /></span></div><span id="ctl00_ContentPlaceHolder1_Editor_ctl94" style="color:Red;visibility:hidden;"></span><span id="ctl00_ContentPlaceHolder1_Editor_ctl95" style="color:Red;visibility:hidden;"></span><span id="ctl00_ContentPlaceHolder1_Editor_ctl96" style="color:Red;visibility:hidden;"></span><span id="ctl00_ContentPlaceHolder1_Editor_ctl97" style="color:Red;visibility:hidden;"></span><span id="ctl00_ContentPlaceHolder1_Editor_ctl98" style="color:Red;visibility:hidden;"></span><span id="ctl00_ContentPlaceHolder1_Editor_ctl99" style="color:Red;visibility:hidden;"></span><span id="ctl00_ContentPlaceHolder1_Editor_ctl100" style="color:Red;visibility:hidden;"></span>
+
+	</div>
+                                
+
+</div>			                               
+                               
+                               
+                               
+                             
+                               <input type="submit" name="ctl00$ContentPlaceHolder1$btnDescription" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnDescription&quot;, &quot;&quot;, true, &quot;VGDescribe&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnDescription" class="button-neutral" style="background: #E40000; border-radius: 8px;
+                                    padding: 12px 12px 30px 12px;" />
+                                
+                               
+                              
+
+                    </div>
+ 
+                          
+                </div>
+		</form>
+                <!----------------------content tab 6-------------------->
+             <form action="@{Application.register6()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcExtras" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Extras</div>
+                            <input name="tab" type="text" value="6"   style="font-style:italic; display:none" />
+                   
+                   
+                    <div class="popleftcon">
+                        <div>
+                            <label for="tagname">
+                                Video Url (required)</label>
+                                <br />
+                            <input name="ctl00$ContentPlaceHolder1$txtViedolink" type="text" id="ctl00_ContentPlaceHolder1_txtViedolink" placeholder="http://youtube.com/watch?v=my-video" style="font-style:italic;width:214px;" /><br /><br />
+                           
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnVideoLink" value="Submit" id="ctl00_ContentPlaceHolder1_btnVideoLink" style="background: #5DBCD2; border-radius: 8px; padding: 6px 12px 21px 12px;" />
+                               <p> The video can be creative but yet serious enough to let supporters know that you are serious about going to school.  Show that you took time to put together information to display your needs.  The more creative and detailed your video is, the more attention and additional support this may bring. Upload to youtube, then cut and paste the URl of the video above.<br /> (EX: http://youtube.com/watch?v=my-video)</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="poprightcon">
+                        <div>
+                            <label for="tagname">
+                                Pitch Media</label>
+                                 <br />
+                                         
+                            <input type="file" name="ctl00$ContentPlaceHolder1$fulextraFile" id="ctl00_ContentPlaceHolder1_fulextraFile" /><br /><br />
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnExtraVideos" value="Upload" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnExtraVideos&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnExtraVideos" style="background: #5DBCD2; border-radius: 8px; padding: 6px 12px 21px 12px;" />
+                                <p> If you want to use additional materials to boost your campaign, such as documents or photos, go ahead and upload them here.</p>
+					   </div>
+                    </div>
+                    
+                            <div style="height:125px;">&nbsp;</div>
+                    
+                    
+                    <div class="popfullcon" style="margin-left:105px;">
+                      <div>
+
+
+
+</div>
+                    </div>
+
+
+                    <div class="clear">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnExtras" value=" Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnExtras&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnExtras" class="button-neutral" style="background: #E40000; border-radius: 8px; padding: 12px 12px 30px;" /></div>
+                </div>
+		</form>
+                <!----------------------content tab 7-------------------->
+             <form action="@{Application.register()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcConfirm" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Confirm</div>
+                            <input name="tab" type="text" value="7"   style="font-style:italic; display:none" />
+                    <div class="popfullcon">
+                    <div class="clear">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnPreview" value="Preview your Campaign" onclick="window.document.forms[0].target='_blank'; setTimeout(function(){window.document.forms[0].target='';}, 500);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnPreview&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnPreview" class="button-neutral" style="background: #E40000; border-radius: 8px; padding: 12px 12px 30px 12px;" />
+                            </div>
+                        <div>
+                            
+                                <label for="name">
+                                    If it's all correct, check this box, if not go back and make changes.<br />
+                                    Done? Click Submit to have it approved and launched.</label>
+                                <input id="ctl00_ContentPlaceHolder1_cbxConfirm" type="checkbox" name="ctl00$ContentPlaceHolder1$cbxConfirm" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$cbxConfirm\',\'\')', 0)" />
+                                
+                            
+                            <div class="clear">
+                                
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnsubmit" value="Submit for Approval" id="ctl00_ContentPlaceHolder1_btnsubmit" disabled="disabled" class="button-neutral" style="background: #E40000; border-radius: 8px; padding: 12px 12px 30px 12px;" />
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+		</form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+	function getQueryVariable(variable) {
+	    var query = window.location.search.substring(1);
+	    var vars = query.split('&');
+	    for (var i = 0; i < vars.length; i++) {
+		var pair = vars[i].split('=');
+		console.log('Query String: %s',pair[1]);
+		if (decodeURIComponent(pair[0]) == variable) {
+		    return decodeURIComponent(pair[1]);
+		}
+	    }
+	    console.log('Query variable %s not found', variable);
+	}
+        var MTabbedPanels1 = new Spry.Widget.MTabbedPanels("MTabbedPanels1");
+	var tab = Number(getQueryVariable("tab"));
+	if( tab > 0)
+	{
+		MTabbedPanels1.showPanel(tab);
+	}
+	else
+	{
+		MTabbedPanels1.showPanel(0);
+	}
+
+    </script>
+    <script language="javascript" type="text/javascript">
+<!--
+        function popitup(url) {
+            newwindow = window.open(url, 'name', 'height=500,width=500');
+            if (window.focus) { newwindow.focus() }
+            return false;
+        }
+    </script>
+
+ 

@@ -1,0 +1,60 @@
+       #{extends 'main.html'/} 
+    <div style="height: 35px;">
+        &nbsp;</div>
+    <div id="mainbox">
+        <div style="border: 3px solid #c1c1c1; margin-top: 32px; width: 655px; margin-left: 150px;">
+        </div>
+        <div id="MTabbedPanels1" class="MTabbedPanels">
+            <ul id="ctl00_ContentPlaceHolder1_ulTabs" class="MTabbedPanelsTabGroup projectabbg"><li class='MTabbedPanelsTab MTabbedPanelsTabVisited' id='tabBasicDetails' tabindex='0' runat='server'><a href='#'><span>Basic Details</span></a></li><li class='MTabbedPanelsTab MTabbedPanelsTabVisited' id='tabGetStarted' tabindex='1' runat='server'><a href='#'><span>GetStarted</span></a></li><li class='MTabbedPanelsTab' id='tabAddMedia' tabindex='0' runat='server'><a href='#'><span>Add Media </span></a></li><li class='MTabbedPanelsTab' id='tabAboutYou' runat='server' tabindex='0'><a href='#'><span>About You </span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabDescribe' runat='server'><a href='#'><span>Describe</span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabExtras' runat='server'><a href='#'><span>Extras</span></a></li><li class='MTabbedPanelsTab' tabindex='0' id='tabConfirm' runat='server'><a href='#'><span>Confirm </span></a></li></ul>
+            <div class="MTabbedPanelsContentGroup">
+
+             <form action="@{Application.getStarted()}" method="GET">
+                <div id="ctl00_ContentPlaceHolder1_tpcBasicDetails" class="MTabbedPanelsContent">
+                    <div class="steptitle clearfix">
+                        Basic Details</div>
+                    <div class="popleftcon">
+                        <p>
+                            
+                            <span id="ctl00_ContentPlaceHolder1_lblFirstName" class="name">First Name</span>
+                            <input name="ctl00$ContentPlaceHolder1$txtFirstName" type="text" value=${s.firstName} id="ctl00_ContentPlaceHolder1_txtFirstName" disabled="disabled" placeholder="Enter FirstName" style="font-style:italic;" />(required)
+                            <input name="id" type="text" value=${s.id}   style="font-style:italic; " />
+                            <input name="tab" type="text" value="1"   style="font-style:italic; " />
+
+                            </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblLastName" class="name">Last Name</span>
+                            <input name="ctl00$ContentPlaceHolder1$txtLastName" type="text" value=${s.lastName} id="ctl00_ContentPlaceHolder1_txtLastName" disabled="disabled" placeholder="Enter LastName" style="font-style:italic;" />(required)
+                            
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblLocation" class="name">City</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="city" type="text" id="ctl00_ContentPlaceHolder1_txtCountry" placeholder="Enter City" style="font-style:italic;" />(required)
+                            <br /><span id="ctl00_ContentPlaceHolder1_rfvCountry" style="color:Red;visibility:hidden;">Enter Your City</span>
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblPostalCode" class="name">Zip Code</span>
+                            <input name="zipcode" type="text" id="ctl00_ContentPlaceHolder1_txtPostalCode" placeholder="Enter Your Zip Code" style="font-style:italic;" />(required)
+                            <span id="ctl00_ContentPlaceHolder1_revPostalCode" style="color:Red;visibility:hidden;">Enter Your Zip Code, Numbers Only</span>
+                       </p>
+                    </div>
+                    <div class="poprightcon">
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblFacebookProfile" class="name">Facebook Profile</span>
+                            <input name="facebook" type="text" id="ctl00_ContentPlaceHolder1_txtFacebookProfile" placeholder="http://www.facebook.com/" style="font-style:italic;" />
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblTwitterProfile" class="name">Twitter Profile</span>
+                            <input name="twitter" type="text" id="ctl00_ContentPlaceHolder1_txtTwitterProfile" placeholder="http://www.twitter.com/" style="font-style:italic;" />
+                        </p>
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblTumblrProfile" class="name">Tumblr Profile</span>
+                            <input name="tumblr" type="text" id="ctl00_ContentPlaceHolder1_txtTumblrProfile" placeholder="www.tumblr.com/" style="font-style:italic;" />
+                        </p>
+                        <div class="clear">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnBasicDetails" value="Save &amp; Continue" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnBasicDetails&quot;, &quot;&quot;, true, &quot;VGBasicDetails&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnBasicDetails" class="button-neutral" style="background: #E40000; border-radius: 8px;
+                                padding: 12px 12px 30px 12px;" />
+                            
+                        </div>
+                    </div>
+                </div>
+		</form>
