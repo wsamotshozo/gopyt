@@ -1,0 +1,25 @@
+@font-face
+{
+    font-family: 'HeaveneticaCond6MedSH';
+    src: url('../fonts/hecmsh/hecmsh_-webfont.eot');
+    src: url('../fonts/hecmsh/hecmsh_-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/hecmsh/hecmsh_-webfont.woff') format('woff'), url('../fonts/hecmsh/hecmsh_-webfont.ttf') format('truetype'), url('../fonts/hecmsh/hecmsh_-webfont.svg#HeaveneticaCond6MedSH') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'journalregular';
+    src: url('/public/stylesheets/journal.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face
+{
+    font-family: 'Conv_segoeui';
+    src: url(/public/stylesheets/segoeui.TTF);
+    font-weight: normal;
+    font-style: normal;
+}

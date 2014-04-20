@@ -3,18 +3,19 @@
 <head>
 	<title>gopyt
 </title>
-<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
-    <link href="@{'/public/stylesheets/style_cf.css'}" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="@{'/public/stylesheets/style-sheet_chrome_cf.css'}" type="text/chrome/safari" />
-<link rel="stylesheet" href="@{'/public/stylesheets/nivo-slider.css'}" type="text/css" media="screen" />
-<link rel="stylesheet" href="@{'/public/stylesheets/slider.css'}" type="text/css" media="screen" />
+	<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="@{'/public/stylesheets/style_cf.css'}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/style-sheet_chrome_cf.css'}" type="text/chrome/safari" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/nivo-slider.css'}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/slider.css'}" type="text/css" media="screen" />
 	<!--<link rel="stylesheet" href="css/layouts_application.css" type="text/css" media="screen" />-->
 	<link rel="stylesheet" href="@{'/public/stylesheets/frontend_forms.css'}" type="text/css" media="screen" />
 	<link rel="stylesheet" href="@{'/public/stylesheets/browse.css'}" type="text/css" media="screen" />
 	<link rel="stylesheet" href="@{'/public/stylesheets/all.css'}" type="text/css" media="screen" />
 	<link rel="stylesheet" href="@{'/public/stylesheets/steps.css'}" type="text/css" media="screen" />
 	<link rel="stylesheet" href="@{'/public/stylesheets/tabs.css'}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/text.css'}" type="text/css" media="screen" />
 	<!--[if IE 9]><link href="/public/stylesheets/all-ie-only_cf.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
 
 	<script type="text/javascript" src="@{'/public/javascripts/jquery-1.4.3.min.js'}"></script>
@@ -22,6 +23,7 @@
 	<script type="text/javascript" src="@{'/public/javascripts/all.js'}"></script>
 	<script type="text/javascript" src="@{'/public/javascripts/tabs.js'}"></script>
 	<script type="text/javascript" src="@{'/public/javascripts/layouts_application.js'}"></script>
+	<script type="text/javascript" src="@{'/public/javascripts/bjqs-1.3.min.js'}"></script>
 
 
 
@@ -29,13 +31,15 @@
 	<script src="@{'/public/javascripts/SpryAccordion.js'}" type="text/javascript"></script>
 	<link href="@{'/public/stylesheets/SpryTabbedPanels.css'}" rel="stylesheet" type="text/css" />
 	<link href="@{'/public/stylesheets/SpryAccordion.css'}" rel="stylesheet" type="text/css" />
+	<link href="@{'/public/stylesheets/bjqs.css'}" rel="stylesheet" type="text/css" />
 
 
     <!----------------------old end--------------------------->
-    <link href="@{'/public/stylesheets/style.css'}" rel="stylesheet" type="text/css" />
+	<link href="@{'/public/stylesheets/max960.css'}" media="screen and (max-width:960px)"rel="stylesheet" type="text/css" />
+	<link href="@{'/public/stylesheets/min960.css'}" media="screen and (min-width:961px)"rel="stylesheet" type="text/css" />
 	<script type="text/javascript"  src="@{'/public/javascripts/jquery.js'}"></script>
 	<script type="text/javascript" src="@{'/public/javascripts/accordionpage.js'}"></script>
-    <script src="@{'/public/javascripts/accordion.js'}" type="text/javascript"></script>
+	<script src="@{'/public/javascripts/accordion.js'}" type="text/javascript"></script>
    
 	<link href="@{'/public/stylesheets/modal.css'}" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
@@ -88,7 +92,7 @@
     <div id="ctl00_header" class="Mian">
      <div class="Header">
 	  <div class="SiteLogo">
-					<a href="/"><img src="@{'/public/images/logo.png'}" height="55" width="225" /></a>
+					<a href="/"><img src="@{'/public/images/logo.png'}"  /></a>
 </div>
 	   
 	   <!--- Nav --->
@@ -100,7 +104,7 @@
 		  #{else}
 		  <li><a href="CampaignCreationNew.aspx">Students <br /><span>start a contest</span></a></li>
 		  #{/else}
-		  <li style="border-right:none;"><a href="/howwework">How <br /><span>we work</span></a></li>
+		  <li ><a href="/howwework">How <br /><span>we work</span></a></li>
 		 </ul>
 		</div>
 	   <!--- /Nav --->
@@ -164,7 +168,7 @@
 					<a href="#" class="BlurImg"><img src="@{'/public/images/gplus.png'}"/></a>
 				</div>
 
-				<div id="copyright" style="float:right; margin-right:-185px; padding:5px; margin-top:60px;">
+				<div id="copyright" style="float:right;  padding:5px; margin-top:60px;">
 					<div class="SpotBlogText">&copy; Gopyt All rights reserved</div>
 				</div>
 			</div>
